@@ -124,25 +124,23 @@ b, strong {
 }
 
 /*** Gridness & Flexness ***/
-body:before, body:after {
-    content: "";
-    position: fixed;
-    background: #900;
-    left: 0;
-    right: 0;
-    height: 10px;
-}
-body:before {
-    top: 0;
-}
-body:after {
-    bottom: 0;
-}
-body {
-    border-left: 10px solid #900;
-    border-right: 10px solid #900;  
-    height: 100vh;
-}
+#top, #bottom, #left, #right {
+	background: #900;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 15px;
+		}
+		#left {left: 0;}
+		#right {right: 0;}
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 15px;
+		}
+		#top {top: 0;}
+		#bottom {bottom: 0;}
 #main {
 	display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
