@@ -1,0 +1,210 @@
+/* Josh W Comeau's CSS Reset, condensed joshwcomeau.com */
+*, *::before, *::after {box-sizing: border-box;}
+* {margin: 0;padding: 0;}
+body {line-height: 1.5;text-align: center;text-rendering: optimizeLegibility;}
+img, picture, video, canvas, svg {display: block;max-width: 100%;}
+input, button, textarea, select {font: inherit;}
+p, h1, h2, h3, h4, h5, h6 {overflow-wrap: break-word;}
+#root, #__next {isolation: isolate;}
+
+
+/* Sebastiano Guerriero Typography System */
+:root {
+    --font-primary: georgia, times, serif;
+    --font-secondary: helvetica, arial, sans-serif;
+
+    /* set base values */
+    --text-base-size: 1em;
+    --text-scale-ratio: 1.2;
+
+    /* type scale */
+    --text-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --text-sm: calc(1em / var(--text-scale-ratio));
+    --text-md: calc(1em * var(--text-scale-ratio));
+    --text-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+    /* line-height */
+    --heading-line-height: 1.5;
+    --body-line-height: 1.5;
+}
+@include breakpoint(md) {
+    :root {
+        --text-base-size: 1em;
+        --text-scale-ratio: 1.25;
+    }
+}
+body {
+    font-size: var(--text-base-size);
+    font-family: var(--font-primary);
+    color: var(--color-text);
+}
+h1, h2, h3, h4, form legend {
+    color: var(--color-text-heading);
+    margin-bottom: var(--space-xxs);
+    line-height: var(--heading-line-height);
+    font-weight: 100;
+}
+/* text size */
+.text--xxxl {
+    font-size: var(--text-xxxl);
+}
+h2, .text--xl {
+    font-size: var(--text-xxl);
+    padding-bottom: 0.5em;
+}
+h3, .text--lg {
+    font-size: var(--text-lg);
+    font-family: var(--font-secondary);
+}
+p span, p a, main li a {
+    font-family: var(--font-secondary);
+    font-size: .7em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+h4, .text--md {
+    font-size: var(--text-md);
+    font-family: var(--font-secondary);
+}
+.text--sm, small {
+    font-size: var(--text-sm);
+}
+.text--xs {
+    font-size: var(--text-xs);
+}
+p {
+    line-height: var(--body-line-height);
+}
+b, strong {
+    font-weight: bold;
+}
+#main {
+    h2, h3, h4 {
+        margin-top: var(--space-sm);
+    }
+    
+    ul, ol, p {
+        margin-bottom: var(--space-md);
+    }
+
+    ul, ol {
+        list-style-position: outside;
+        padding-left: 24px;
+    }
+
+    ul {
+        list-style-type: disc;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul li, ol li {
+        line-height: var(--body-line-height);
+    }
+    
+    em {
+        font-style: italic;
+    }
+
+    u {
+        text-decoration: underline;
+    }
+}
+/* utility classes */
+.truncate {
+    // truncate text if it exceeds parent
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*** Gridness & Flexness ***/
+body:before, body:after {
+    content: "";
+    position: fixed;
+    background: #900;
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+body:before {
+    top: 0;
+}
+body:after {
+    bottom: 0;
+}
+body {
+    border-left: 10px solid #900;
+    border-right: 10px solid #900;  
+    height: 100vh;
+}
+#main {
+	display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-template-rows: auto;
+}
+header {
+	grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 1em 4em 0 4em;
+}
+nav {
+	grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding: 0 4em 1em 4em;
+}
+article {
+	grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    padding: 1em 4em;
+    text-align: left;
+}
+.fnav {
+	display: flex;
+	justify-content: space-evenly;
+	align-content: stretch;
+	text-align: left;
+	font-size: var(--text-sm);
+	font-family: var(--font-secondary);
+	border-bottom: 1px solid #efefef;
+}
+dl {
+	flex-grow: 1;
+    flex-basis: 0;
+}
+h1 {
+	font-size: var(--text-xxxl);
+	border-bottom: 1px solid #efefef;
+}
+dt {
+	border-bottom: 1px solid #efefef;
+}
+dd {
+
+}
+dt a {
+	text-decoration: none;
+	padding: .5em 1em;
+	color: black;
+	display: block;
+}
+dd a {
+	text-decoration: none;
+	padding: .5em 1em;
+	color: black;
+	display: block;
+}
+dt a:hover, dd a:hover, .current {
+	background-color: #efefef;
+}
