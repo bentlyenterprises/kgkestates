@@ -53,11 +53,16 @@ h1, h2, h3, h4, form legend {
 }
 h2, .text--xl {
     font-size: var(--text-xxl);
-    padding-bottom: 0.5em;
+    padding-bottom: 0.25em;
 }
 h3, .text--lg {
     font-size: var(--text-lg);
+    padding-top: 1em;
+}
+h6 {
+    font-size: var(--text-xs);
     font-family: var(--font-secondary);
+    padding: 0 0 1em 0;
 }
 p span, p a, main li a {
     font-family: var(--font-secondary);
@@ -124,23 +129,6 @@ b, strong {
 }
 
 /*** Gridness & Flexness ***/
-#top, #bottom, #left, #right {
-	background: #900;
-	position: fixed;
-	}
-	#left, #right {
-		top: 0; bottom: 0;
-		width: 15px;
-		}
-		#left {left: 0;}
-		#right {right: 0;}
-		
-	#top, #bottom {
-		left: 0; right: 0;
-		height: 15px;
-		}
-		#top {top: 0;}
-		#bottom {bottom: 0;}
 #main {
 	display: grid;
     grid-template-columns: repeat(12, [col-start] 1fr);
@@ -185,8 +173,16 @@ h1 {
 	font-size: var(--text-xxxl);
 	border-bottom: 1px solid #efefef;
 }
+h1 a {
+    color: black;
+    text-decoration: none;
+}
+h1 a:hover {
+    color: #900;
+}
 dt {
 	border-bottom: 1px solid #efefef;
+    font-weight: bold;
 }
 dd {
 
@@ -206,3 +202,27 @@ dd a {
 dt a:hover, dd a:hover, .current {
 	background-color: #efefef;
 }
+
+.quotef {
+    padding-top: 8em;
+}
+
+
+/*** Framed Border Hack ***/
+#top, #bottom, #left, #right {
+background: #900;
+position: fixed;
+}
+#left, #right {
+    top: 0; bottom: 0;
+    width: 15px;
+    }
+    #left {left: 0;}
+    #right {right: 0;}
+    
+#top, #bottom {
+    left: 0; right: 0;
+    height: 15px;
+    }
+    #top {top: 0;}
+    #bottom {bottom: 0;}
