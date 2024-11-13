@@ -206,7 +206,25 @@ dt a:hover, dd a:hover, .current {
 .quotef {
     padding-top: 8em;
 }
-
+.events {
+    padding: 0 !important;
+    margin: 0;
+}
+.eventl {
+    list-style: none;
+    border-bottom: 1px solid #efefef;
+    padding: 1em;
+}
+.eventt {
+    
+}
+.eventd {
+    display: block;
+}
+.eventi {
+    display: block;
+    color: #333
+}
 
 /*** Framed Border Hack ***/
 #top, #bottom, #left, #right {
