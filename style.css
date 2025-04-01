@@ -83,6 +83,9 @@ h4, .text--md {
 p {
     line-height: var(--body-line-height);
 }
+p + p {
+    text-indent: 1em;
+}
 b, strong {
     font-weight: bold;
 }
@@ -229,6 +232,33 @@ dt a:hover, dd a:hover, .current {
     display: block;
     color: #333
 }
+
+.estatepointers {
+    width: 50%;
+    float: left;
+}
+.estatepointers h3, h5, ul {
+    margin-right: 2em;
+}
+.estatepointers h3 {
+    border-bottom: 1px solid #d2d2d2;
+    margin-bottom: .5em;
+}
+.estatepointers h5 {
+    font-size: var(--text-s);
+    padding: 1em 0 0 0;
+}
+.estatepointers ul {
+    padding-left: 0 !important;
+}
+.estatepointers ul li {
+    border-bottom: 1px solid #efefef;
+    list-style: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: .25em;
+}
+.estatepointers ul li:nth-child(odd) { background: rgb(240, 240, 240); }
 
 /*** Framed Border Hack ***/
 #top, #bottom, #left, #right {
