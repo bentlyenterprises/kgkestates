@@ -260,6 +260,9 @@ dt a:hover, dd a:hover, .current {
 }
 .estatepointers ul li:nth-child(odd) { background: rgb(240, 240, 240); }
 
+
+/*** Home Mockup ***/
+
 /*** Framed Border Hack ***/
 #top, #bottom, #left, #right {
 background: #900;
