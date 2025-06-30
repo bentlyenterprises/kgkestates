@@ -1,0 +1,5 @@
+[[redirects]]
+  from    = "/TempOGAwesomeContent/*"
+  to      = "/"
+  status  = 200
+  force   = true
