@@ -110,43 +110,12 @@ body{ padding-top:var(--navbar-h); }
 }
 
 /* ───────── Breakpoints ───────── */
-@media (min-width: 768px) {
-  .main-nav { --nav-pad-y: 1rem; --nav-pad-x: 1.5rem; }
-}
 
-@media (min-width: 992px) {
-  .main-nav { --nav-pad-y: 1.2rem; --nav-pad-x: 2.1rem; }
-  .main-nav .navbar-collapse { justify-content: flex-start; }
-}
-
-/* centre nav items on ≤ 991.98 px */
-@media (max-width: 991.98px) {
-  .main-nav .navbar-nav {
-    margin: 0 auto;
-    align-items: center;
-  }
-}
 
 /* ─────────────────────────────────────────────────
      CUSTOM: white 3-bar icon with no box (one-line SVG)
    ───────────────────────────────────────────────── */
-.main-nav .navbar-toggler {
-  border: none;
-  background: none;
-  box-shadow: none;
-  padding: 0.25rem 0.5rem;
-}
 
-.main-nav .navbar-toggler-icon {
-  /* a pure-white 3-line SVG, no container */
-  background-image: url('data:image/svg+xml;utf8,\
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">\
-<path stroke="%23FFFFFF" stroke-width="2" stroke-linecap="round" d="M4 7h22M4 15h22M4 23h22"/>\
-</svg>');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1.5em;
-}
 
 /* ======================================================================
       FOOTER
