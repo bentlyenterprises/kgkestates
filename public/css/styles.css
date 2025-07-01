@@ -28,7 +28,7 @@ body {
    NAVBAR HEIGHT VARIABLE, FIXED NAV + PAGE OFFSET + HERO TWEAKS
 ================================================================= */
 :root {                      /* mobile default */
-  --navbar-h: 70px;
+  --navbar-h: 90px;
 }
 @media (min-width: 768px){ :root{ --navbar-h: 80px; } }
 @media (min-width: 992px){ :root{ --navbar-h: 96px; } }
@@ -55,6 +55,7 @@ body{ padding-top:var(--navbar-h); }
   padding: var(--nav-pad-y) var(--nav-pad-x);
   z-index: 1100;
   box-shadow: none !important;
+  height: 120px;
 }
 
 /* shared typography for links & button */
