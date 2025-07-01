@@ -1,0 +1,681 @@
+/* ======================================================================
+      ROOT VARIABLES (palette + breakpoints)
+   ====================================================================== */
+:root {
+  /* Colours */
+  --clr-nav-bg:       rgb(25, 38, 25);
+  --clr-subnav-bg:    rgb(20, 41, 22);
+  --clr-accent:       rgb(213, 218, 212);
+
+  /* Breakpoints */
+  --bp-md: 768px;
+  --bp-lg: 992px;
+}
+
+/* ======================================================================
+      GLOBAL BASE
+   ====================================================================== */
+body {
+  /* offset for the fixed header */
+  padding-top: var(--navbar-h);
+}
+
+.nav-link {
+  text-transform: uppercase;
+}
+
+/* ================================================================
+   NAVBAR HEIGHT VARIABLE, FIXED NAV + PAGE OFFSET + HERO TWEAKS
+================================================================= */
+:root {                      /* mobile default */
+  --navbar-h: 70px;
+}
+@media (min-width: 768px){ :root{ --navbar-h: 80px; } }
+@media (min-width: 992px){ :root{ --navbar-h: 96px; } }
+
+.main-nav{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:1000;
+  min-height:var(--navbar-h);
+  display:flex;             /* keeps your existing flex layout */
+}
+
+body{ padding-top:var(--navbar-h); }
+
+/* ======================================================================
+      MAIN NAVBAR
+   ====================================================================== */
+.main-nav {
+  /* adjustable paddings (mobile default) */
+  --nav-pad-y: .75rem;
+  --nav-pad-x: 1rem;
+
+  background: var(--clr-nav-bg);
+  padding: var(--nav-pad-y) var(--nav-pad-x);
+  z-index: 1100;
+  box-shadow: none !important;
+}
+
+/* shared typography for links & button */
+.main-nav .nav-link,
+.main-nav .btn-book {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--clr-accent);
+}
+
+/* links need a border; button does not */
+.main-nav .nav-link { border-color: var(--clr-accent); }
+
+/* logo */
+.main-nav .navbar-brand img { height: 60px; }
+
+/* hover / focus */
+.main-nav .nav-link:hover,
+.main-nav .btn-book:is(:hover, :focus) {
+  color: #fff;
+  background: transparent;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+/* BOOK NOW button */
+.btn-book {
+  padding: .25rem 1.5rem;
+  border-radius: 0;
+  border: none;                     /* clears earlier border-color */
+  box-shadow: 0 0 0 .75px var(--clr-accent);
+}
+
+/* consistent horizontal padding */
+.main-nav .nav-item,
+.footer-nav .nav-item { padding: 0 .5rem; }
+
+
+.calendar-section {
+  background-image: url("/images/wainscoating.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
+
+/* FOOTER FOOTER FOOTER (INHERITS MUCH OF MAIN-NAV) */
+.footer-nav {
+  --nav-pad-x: 1rem;                /* fallback if not in :root */
+  padding: 2.6rem var(--nav-pad-x);
+}
+
+/* ───────── Breakpoints ───────── */
+@media (min-width: 768px) {
+  .main-nav { --nav-pad-y: 1rem; --nav-pad-x: 1.5rem; }
+}
+
+@media (min-width: 992px) {
+  .main-nav { --nav-pad-y: 1.2rem; --nav-pad-x: 2.1rem; }
+  .main-nav .navbar-collapse { justify-content: flex-start; }
+}
+
+/* centre nav items on ≤ 991.98 px */
+@media (max-width: 991.98px) {
+  .main-nav .navbar-nav {
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+
+/* ─────────────────────────────────────────────────
+     CUSTOM: white 3-bar icon with no box (one-line SVG)
+   ───────────────────────────────────────────────── */
+.main-nav .navbar-toggler {
+  border: none;
+  background: none;
+  box-shadow: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.main-nav .navbar-toggler-icon {
+  /* a pure-white 3-line SVG, no container */
+  background-image: url('data:image/svg+xml;utf8,\
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">\
+<path stroke="%23FFFFFF" stroke-width="2" stroke-linecap="round" d="M4 7h22M4 15h22M4 23h22"/>\
+</svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.5em;
+}
+
+/* ======================================================================
+      FOOTER
+  --clr-nav-bg:       rgb(31, 42, 37);
+  --clr-subnav-bg:    rgb(20, 41, 22);
+  --clr-accent:       rgb(213, 218, 212);
+   ====================================================================== */
+  /* Container */
+  .footer-bar {
+    background: var(--clr-nav-bg);
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+  }
+  .footer-inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  @media (min-width: 992px) {
+    .footer-inner {
+      flex-direction: row;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+    .footer-contact{
+      margin-left: 2rem;
+    }
+  }
+
+  /* Logo */
+  .footer-logo {
+    display: block;
+    margin-right: 1.5rem;
+  }
+
+  /* Info blocks */
+  .footer-info,
+  .footer-contact {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: 300;
+    letter-spacing: .03em;
+    color: var(--clr-accent);
+  }
+  .footer-contact span,
+  .footer-info span {
+    display: block;
+  }
+
+  /* Social */
+  .footer-social {
+    margin-left: auto;
+    display: flex;
+    gap: 1.7rem;
+  }
+  .footer-social a img {
+    display: block;
+  }
+
+  /* Legal strip */
+.footer-legal{
+  background: rgb(17,19,19);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+}
+
+.footer-legal a{
+  color: rgb(85,92,87);
+  text-decoration: none;
+}
+
+.footer-legal a:hover{
+  text-decoration: underline;
+}
+
+/* =========================================================================
+      HERO CAROUSEL
+   ========================================================================= */
+
+/* Wrapper: keep the image’s native shape at any width */
+.hero-banner {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+/* Inner containers follow that ratio */
+.hero-banner .carousel-inner,
+.hero-banner .carousel-item {
+  height: auto;
+}
+
+/* Images fill width and always show complete */
+.hero-banner .carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hollow indicator dots (unchanged from last tweak) */
+#heroCarousel .carousel-indicators{
+  bottom: 1.25rem;
+}
+
+#heroCarousel .carousel-indicators [data-bs-target]{
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid rgb(255 255 255 / 75%);
+  opacity: 0.8;
+}
+#heroCarousel .carousel-indicators .active{
+  background: rgb(255 255 255);
+  border-color: rgb(255 255 255);
+}
+/* =========================================================================
+   SUB-NAV (COTTAGE TABS - HOME PAGE)
+   ========================================================================= */
+
+.subnav {
+  --subnav-height:       133px;
+  --pill-border-width:    1.5px;
+  --pill-border-color:    rgba(255,255,255,.4);
+  --pill-letter-spacing:  0.02em;
+  --pills-width-xs:      100%;
+  --pills-width-md:      100%;
+  --pills-width-lg:      90%;
+
+  background-color: var(--clr-nav-bg);
+  min-height:       var(--subnav-height);
+}
+
+/* logo */
+.subnav .navbar-brand img {
+  height: 90px;
+  width: auto;
+}
+
+/* pill container: force flex-wrap in exactly two rows */
+.subnav .nav-pills {
+  width: var(--pills-width-xs);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* each pill: three per row, but allow shrink to avoid overflow */
+.subnav .nav-item {
+  flex: 1 1 33.3333%;
+  max-width: 33.3333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: var(--pill-border-width) solid var(--pill-border-color);
+  border-bottom: var(--pill-border-width) solid var(--pill-border-color);
+}
+/* remove borders on right edge of each row, and bottom edge of top row */
+.subnav .nav-item:nth-child(3n)  { border-right: none; }
+.subnav .nav-item:nth-child(n+4) { border-bottom: none; }
+
+/* link styling (main label can wrap if needed) */
+.subnav .nav-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0.25rem; /* mobile default, adjust as needed */
+  text-align: center;
+  color: var(--clr-accent);
+  font-weight: 400;
+  letter-spacing: var(--pill-letter-spacing);
+  line-height: 1.1;
+}
+
+/* hover & active states */
+.subnav .nav-link:hover {
+  color: #fff;
+}
+.subnav .nav-link.active {
+  background: none;
+  color: rgb(107,116,104);
+  text-decoration: none;
+}
+
+/* sub-label stays on one line, pinned to bottom if has-sub */
+.subnav .pill-sub {
+  display: block;
+  font-size: 0.65rem;
+  line-height: 1.2;
+  margin-top: 0.15rem;
+  color: rgb(182,113,47);
+  font-weight: 500;
+  white-space: nowrap; /* NEVER wrap sub-label */
+}
+
+/* pills with sub-label: pin the sub-label to bottom */
+.subnav .nav-link.has-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes sub-label to bottom */
+  align-items: center;
+  padding-top: 0.5rem;    /* shrink top padding */
+  padding-bottom: 0.25rem;/* minimal bottom padding */
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  line-height: 1.1;
+}
+
+/* larger‐screen override for has-sub pills */
+@media (min-width: 480px) {
+  .subnav .nav-link.has-sub {
+    padding: 0.8rem 7px 0.25rem; /* original desktop values */
+  }
+}
+
+/* larger‐screen override for plain pills */
+@media (min-width: 480px) {
+  .subnav .nav-link {
+    padding: 14px; /* original desktop value */
+  }
+}
+
+/* ─── Sub-nav micro breakpoint ─── */
+@media (max-width: 479.98px) {
+  .subnav .nav-link {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.25rem; /* ensure three pills fit across */
+  }
+  .subnav .pill-sub {
+    font-size: 0.6rem; /* shrink sub-text if needed */
+  }
+}
+
+/* —— IPAD (MIDSIZE) —— */
+@media (min-width: 768px) {
+  .subnav .nav-pills { width: var(--pills-width-md); }
+  .subnav .navbar-brand img {
+  height: 80px;
+}
+}
+
+/* —— DESKTOP (LARGE) —— */
+@media (min-width: 992px) {
+  .subnav .nav-pills { width: var(--pills-width-lg); }
+}
+
+/* ---------- Sticky behaviour (override) ---------- */
+.sticky-subnav {
+  height: auto;
+  min-height: unset;
+  position: sticky;
+  top: var(--main-nav-h, 96px);
+  z-index: 1025;
+  background: var(--clr-nav-bg);
+}
+
+/* iPad landscape / midsize ≥768 px <992 px ---- */
+@media (max-width: 991.98px) {
+  :root { --main-nav-h: 80px; }
+}
+
+/* phones / xs <768 px  ------------------------ */
+@media (max-width: 767.98px) {
+  :root { --main-nav-h: 70px; }
+}
+
+/* very narrow screens <480 px ------------------ */
+@media (max-width: 479.98px) {
+  :root { --main-nav-h: 54px; }
+}
+
+
+/* =========================================================================
+      UNIVERSAL HERO (all cottages + intro)
+   ========================================================================= */
+.first-section, .home-first-section {
+  /* —— tweakables —— */
+  --section-pad-top:   2rem;
+  --section-pad-sides: 3rem;
+  --section-pad-bot:   2rem;
+
+  --title-info-gap:    1.5rem;
+  --info-text-gap:     1rem;
+
+  position:   relative;
+  margin:     0;
+  padding:
+    var(--section-pad-top)
+    var(--section-pad-sides)
+    var(--section-pad-bot)
+    var(--section-pad-sides);
+  min-height: 28vh;
+  text-align: center;
+  color:      #fff;
+  background:
+    url("/images/wainscoating.withtoprail.png")
+      top center/cover no-repeat;
+}
+
+/* —— Heading —— */
+.first-section > h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 2.7rem;
+  color: rgb(226,226,217);
+  margin: 0 0 var(--title-info-gap) 0;
+}
+
+/* —— info line (“Sleeps 7 | …”) —— */
+.first-section p:first-of-type {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(47,54,50);
+  margin: 0 0 var(--info-text-gap) 0;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+/* —— narrative paragraph —— */
+.first-section p:nth-of-type(2) {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: rgb(204,209,199);
+  margin: 0;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+/* —— breakpoint tweaks —— */
+@media (min-width: 768px) {
+  .first-section, .home-first-section {
+    --section-pad-top:   2.7rem;
+    --section-pad-sides: 5rem;
+  }
+}
+@media (min-width: 992px) {
+  .first-section, .home-first-section {
+    --section-pad-sides: 7rem;
+  }
+}
+
+.wide-image img{
+  display:block;   /* kills inline gap under images */
+  width:100%;
+  height:auto;
+}
+
+/* ===============================================================
+      HOMEPAGE for Cottages
+   =============================================================== */
+.welcome-image{
+  /*background: url("/images/welcome.stacked.svg") top center / contain no-repeat;*/
+  background: url("/images/Welcome.svg") top center / contain no-repeat;
+  height: clamp(120px, 58vw, 420px); 
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.home-first-section h1 {
+  text-align: center;
+  margin: 0 auto 0.5rem auto;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  padding-bottom: 2rem;
+}
+
+.home-first-section p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #e2e2d9;
+  margin: 0;
+  text-align: left;
+  letter-spacing: 0.02em;
+  padding-bottom: 2rem;
+}
+
+.link-style {
+  color: rgb(200,123,57);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+@media (min-width: 768px){
+  .welcome-image{
+    background-image: url("/images/Welcome.svg");
+    height: clamp(350px, 12vw, 180px); 
+    margin: 26px auto;
+  }
+}
+
+/* ===============================================================
+      OPTIONAL MODIFIER for the second hero
+   =============================================================== */
+.alt-hero{
+  --section-pad-top:4rem;  /* override any variable you like */
+  --section-pad-bot:4.5rem;
+  background-image:url("/images/wainscoating.png"); /* same for now */
+}
+.alt-hero > h3{
+  padding-bottom: 1rem;
+  text-align: left;
+  margin: 0 auto 0.5rem auto;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  padding-bottom: 2rem;
+  color: #e2e2d9;
+}
+
+/* ===============================================================
+      IMAGE-SHARE SECTION
+   =============================================================== */
+.content .image-share {
+  /* … your existing vars … */
+  --share-img-w:       33.333%;     /* ← column width */
+  --share-img-max-h:   30vh;        /* ← NEW: max height of the image */
+  --share-text-w:      66.666%;
+  --share-text-align:  left;
+
+  display:             flex;
+  flex-wrap:           nowrap;
+  background-color:    #e2e2d9;
+  margin:              0;
+}
+
+/* reset any unwanted gutter/margins if you use a .row */
+.content .image-share .row {
+  margin: 0;
+  padding: 0;
+}
+
+/* —— TEXT COLUMN —— */
+.content .image-share-text-col {
+  flex:                0 0 var(--share-text-w);
+  max-width:           var(--share-text-w);
+  padding:             2rem 0rem;        /* adjust as desired */
+  box-sizing:          border-box;
+
+  /* apply text alignment variable */
+  text-align:          var(--share-text-align);
+}
+
+.content .image-share-text-col h3 {
+  margin-bottom:       1rem;
+  font-family:         'Raleway', sans-serif;
+  font-weight:         700;
+  font-size: 3.2rem;
+  color:               #575d62;
+  padding-left: 4rem;
+}
+
+.content .image-share-text-col p {
+  margin:              0 0 1rem;
+  font-family:         'Raleway', sans-serif;
+  font-weight:         400;
+  font-size:           1.4rem;
+  line-height:         1.5;
+  color:               #575d58;
+  padding-left: 4rem;
+}
+
+/* —— IMAGE COLUMN —— */
+.content .image-share-img-col {
+  flex:          0 0 var(--share-img-w);
+  max-width:     var(--share-img-w);
+  /* remove overflow:hidden so shorter images won't get cut off */
+  overflow:      visible;
+}
+
+.content .image-share-img-col img {
+  display:           block;
+  width:             auto;               /* don’t stretch width */
+  height:            auto;               /* don’t stretch height */
+  max-height:        40rem; /* limit how tall it can get */
+  object-fit:        contain;            /* show whole image without cropping */
+  object-position:   center center;
+  margin-left:       auto;               /* push it flush to the right */
+}
+
+
+/* —— TABLET (≥768px) OVERRIDES —— */
+@media (min-width: 768px) {
+  .content .image-share {
+    --share-img-w:     40%;
+    --share-text-w:    60%;
+    /* you could also tweak --share-img-max-h here if desired */
+  }
+  .content .image-share-text-col {
+    padding:           3rem;
+  }
+}
+
+/* —— DESKTOP (≥992px) OVERRIDES —— */
+@media (min-width: 992px) {
+  .content .image-share {
+    --share-img-w:     35%;
+    --share-text-w:    65%;
+    /* desktop-specific max-height? override --share-img-max-h here */
+  }
+  .content .image-share-text-col {
+    padding:           3rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .content .image-share-img-col {
+    display: none;
+  }
+  .content .image-share-text-col {
+    flex:       none;
+    width:      100%;
+    max-width:  100%;
+    padding:    2rem;   /* adjust side padding for mobile if needed */
+  }
+}

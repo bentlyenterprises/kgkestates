@@ -1,0 +1,36 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark main-nav fixed-top shadow-sm">
+    <div class="container-fluid">
+
+      <!-- Toggler first for mobile -->
+      <button class="navbar-toggler order-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapse wrapper turned into full-width flex -->
+      <div class="collapse navbar-collapse w-100 order-1 order-lg-0" id="mainNav">
+        <ul class="navbar-nav me-auto">  
+          <!-- LEFT links go here
+          <li class="nav-item"><a class="nav-link" href="#">THE ESTATES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">VISIT</a></li>
+          -->
+        </ul>
+
+        <!-- Brand centered -->
+        <a class="navbar-brand mx-auto order-0" href="{{ "/" | relURL }}">
+          <img src="{{ "images/kgk.estates.logo.svg" | relURL }}" alt="Logo" height="40">
+        </a>
+
+        <ul class="navbar-nav ms-auto">  
+          <!-- RIGHT links go here
+          <li class="nav-item"><a class="nav-link" href="#">STEWARDSHIP</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+          -->
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>

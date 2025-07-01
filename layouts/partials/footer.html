@@ -1,0 +1,48 @@
+<footer>
+
+
+  <!-- Footer bar (no Bootstrap utilities) -->
+  <div class="footer-bar">
+    <div class="footer-inner">
+      <!-- Logo -->
+      <a class="footer-logo" href="{{ "/" | relURL }}">
+        <img src="{{ "images/kgk.monogram.gold.svg" | relURL }}" alt="Logo" height="70">
+      </a>
+
+      <!-- Row1 – property name + address -->
+
+
+      <!-- Social icons -->
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook" target="_blank">
+          <img src="{{ "images/facebook.svg" | relURL }}" alt="Facebook" height="38" width="38">
+        </a>
+        <a href="#" aria-label="Instagram" target="_blank">
+          <img src="{{ "images/x.twitter.svg" | relURL }}" alt="Instagram" height="38" width="38">
+        </a>
+        <a href="#" aria-label="Instagram" target="_blank">
+          <img src="{{ "images/instagram.svg" | relURL }}" alt="Instagram" height="38" width="38">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal links strip --><!--
+<div class="footer-legal">
+  <a href="/privacy-policy/">Privacy &amp; Cookie Policy</a>
+  <a href="/terms-conditions/">Terms &amp; Conditions</a>
+</div>-->
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.jquery.min.js"></script>
+<script>
+  $(function () {
+    $('.cottage-gallery').each(function () {
+      $(this).find('a').simpleLightbox({
+        captionsData: 'alt',
+        captionDelay: 250
+      });
+    });
+  });
+</script>

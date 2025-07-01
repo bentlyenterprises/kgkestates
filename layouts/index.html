@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+  {{/* ─── Hero carousel uses .Params.heroImages on the homepage ─── */}}
+  {{ if .Params.heroImages }}
+    {{ partial "hero.html" . }}
+  {{ else }}
+    <section id="heroCarousel" class="hero-banner carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
+      <div class="carousel-indicators" id="carouselIndicators"></div>
+      <div class="carousel-inner"      id="carouselInner"></div>
+    </section>
+  {{ end }}
+
+  {{/* ─── Homepage intro pulled from content/_index.md ─────────── */}}
+  <section id="home-intro" class="text-center">
+    {{ .Content }}
+  </section>
+
+{{ end }}

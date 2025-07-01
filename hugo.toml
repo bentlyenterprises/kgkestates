@@ -1,0 +1,9 @@
+baseURL = 'https://KGK.org/'
+languageCode = 'en-us'
+title = 'KGK'
+defaultContentLanguage = "en"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
