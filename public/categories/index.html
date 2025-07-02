@@ -45,6 +45,23 @@
   </nav>
 </header>
 
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const nav = document.querySelector('.main-nav');
+
+  function onScroll(){
+    if (window.scrollY === 0) {
+      nav.classList.add('transparent');
+    } else {
+      nav.classList.remove('transparent');
+    }
+  }
+
+  onScroll();
+  window.addEventListener('scroll', onScroll);
+});
+</script>
+
     <main class="flex-fill">
       
   <ul>

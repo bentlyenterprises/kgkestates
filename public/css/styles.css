@@ -388,7 +388,7 @@ body{ padding-top:0rem; }
 .content .image-share-text-col {
   flex:                0 0 var(--share-text-w);
   max-width:           var(--share-text-w);
-  padding:             2rem 0rem;        /* adjust as desired */
+  padding:             2rem 0rem;
   box-sizing:          border-box;
   text-align:          var(--share-text-align);
 }
@@ -399,7 +399,7 @@ body{ padding-top:0rem; }
   font-weight:         700;
   font-size: 3.2rem;
   color:               rgb(67, 67, 75);
-  padding: 0rem 2rem;
+  padding: 0rem 3rem;
 }
 
 .content .image-share-text-col p {
@@ -409,7 +409,7 @@ body{ padding-top:0rem; }
   font-size:           1.4rem;
   line-height:         1.7;
   color:               rgb(67, 67, 75);
-  padding: 0rem 2rem;
+  padding: 0rem 3rem;
 }
 
 /* —— IMAGE COLUMN —— */
