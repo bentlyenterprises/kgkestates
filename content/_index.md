@@ -35,7 +35,7 @@ deer no longer face management for sport, but are part of a balanced ecosystem.
       <p>This is not conservation for conservation’s sake. It’s about creating a more resilient future, ecologically, economically, and socially. Wind turbines continue to generate clean energy. Historic buildings are restored with care. Local employment is stronger than before, with new roles in land management, restoration, and hospitality.</p>
     </div>
     <div class="image-share-img-col">
-      <img src="/images/tempimage.jpg" alt="Rewilding in action">
+      <img src="/images/beethistle.jpg" alt="Rewilding in action">
     </div>
   </section>
 </div>
@@ -72,3 +72,64 @@ past and present coexist, and where restoration becomes legacy.
 for you here. See you soon.
 </p>
 </div>
+
+<div class="cottage-gallery-title">
+  <img
+    src="/images/community.svg"
+    alt="Gallery"
+    class="gallery-lettering"
+  />
+</div>
+
+<div class="text-center home-first-section alt-hero">
+<p>This area is alive with gatherings that celebrate rural life, heritage, and shared rhythms of
+the seasons. Many community events here are handed down for generations. This is where neighbours and visitors mix easily, and the community’s character shines most bright.
+</p>
+</div>
+
+<div class="content">
+  <section class="image-share image-share--reverse">
+    <div class="image-share-text-col">
+      <h3>Kildrummy Veteran & Vintage Vehicles Club Rally</h3>
+      <p>Every summer, the Kildrummy Rally draws enthusiasts and curious visitors alike to admire classic cars, vintage tractors, and motorcycles. Held on the estate grounds, it’s a relaxed, family-friendly event that feels part country fete, part living museum. Engines hum, stories are swapped, and the patch of land becomes a home for mechanical nostalgia.</p>
+    </div>
+    <div class="image-share-img-col">
+      <img src="/images/beethistle.jpg" alt="Rewilding in action">
+    </div>
+  </section>
+</div>
+
+<div class="text-center home-first-section alt-hero">
+
+### Aboyne Highland Games
+<p>A short drive away, the Aboyne Games is a spring fixture dating back to 1867. Strong athletes weave through caber tosses while pipe bands set the tempo. There’s dancing, children’s races, and highland hospitality under the open sky.
+</p>
+</div>
+
+<div class="content">
+  <section class="image-share">
+    <div class="image-share-text-col">
+      <h3>Aberdeen Highland Games</h3>
+      <p>Held at Hazlehead Park in Aberdeen in the summertime, this event draws up to 15,000 people for heavy athletics, Highland dancing, piping competitions, and local trade stalls. Meanwhile, families gather on grassy banks to soak in the spectacle of kilts and camaraderie.</p>
+    </div>
+    <div class="image-share-img-col">
+      <img src="/images/beethistle.jpg" alt="Rewilding in action">
+    </div>
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

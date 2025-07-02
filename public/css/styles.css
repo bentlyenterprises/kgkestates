@@ -41,7 +41,7 @@ body {
   display:flex;             /* keeps your existing flex layout */
 }
 
-body{ padding-top:var(--navbar-h); }
+body{ padding-top:0rem; }
 
 /* ======================================================================
       MAIN NAVBAR
@@ -86,7 +86,7 @@ body{ padding-top:var(--navbar-h); }
 .btn-book {
   padding: .25rem 1.5rem;
   border-radius: 0;
-  border: none;                     /* clears earlier border-color */
+  border: none;
   box-shadow: 0 0 0 .75px var(--clr-accent);
 }
 
@@ -106,18 +106,24 @@ body{ padding-top:var(--navbar-h); }
 
 /* FOOTER FOOTER FOOTER (INHERITS MUCH OF MAIN-NAV) */
 .footer-nav {
-  --nav-pad-x: 1rem;                /* fallback if not in :root */
+  --nav-pad-x: 1rem;
   padding: 2.6rem var(--nav-pad-x);
 }
 
-/* ───────── Breakpoints ───────── */
 
+.main-nav {
+  transition: background-color 0.3s ease;
+}
 
-/* ─────────────────────────────────────────────────
-     CUSTOM: white 3-bar icon with no box (one-line SVG)
-   ───────────────────────────────────────────────── */
+/* fully transparent background */
+.main-nav.transparent {
+  background-color: transparent !important;
+}
 
-
+/* solid background once you scroll past offset */
+.main-nav.solid {
+  background-color: rgba(33, 37, 41, 0.9) !important;
+}
 /* ======================================================================
       FOOTER
   --clr-nav-bg:       rgb(31, 42, 37);
@@ -244,163 +250,6 @@ body{ padding-top:var(--navbar-h); }
   background: rgb(255 255 255);
   border-color: rgb(255 255 255);
 }
-/* =========================================================================
-   SUB-NAV (COTTAGE TABS - HOME PAGE)
-   ========================================================================= */
-
-.subnav {
-  --subnav-height:       133px;
-  --pill-border-width:    1.5px;
-  --pill-border-color:    rgba(255,255,255,.4);
-  --pill-letter-spacing:  0.02em;
-  --pills-width-xs:      100%;
-  --pills-width-md:      100%;
-  --pills-width-lg:      90%;
-
-  background-color: var(--clr-nav-bg);
-  min-height:       var(--subnav-height);
-}
-
-/* logo */
-.subnav .navbar-brand img {
-  height: 90px;
-  width: auto;
-}
-
-/* pill container: force flex-wrap in exactly two rows */
-.subnav .nav-pills {
-  width: var(--pills-width-xs);
-  margin-inline: auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/* each pill: three per row, but allow shrink to avoid overflow */
-.subnav .nav-item {
-  flex: 1 1 33.3333%;
-  max-width: 33.3333%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: var(--pill-border-width) solid var(--pill-border-color);
-  border-bottom: var(--pill-border-width) solid var(--pill-border-color);
-}
-/* remove borders on right edge of each row, and bottom edge of top row */
-.subnav .nav-item:nth-child(3n)  { border-right: none; }
-.subnav .nav-item:nth-child(n+4) { border-bottom: none; }
-
-/* link styling (main label can wrap if needed) */
-.subnav .nav-link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 0.5rem 0.25rem; /* mobile default, adjust as needed */
-  text-align: center;
-  color: var(--clr-accent);
-  font-weight: 400;
-  letter-spacing: var(--pill-letter-spacing);
-  line-height: 1.1;
-}
-
-/* hover & active states */
-.subnav .nav-link:hover {
-  color: #fff;
-}
-.subnav .nav-link.active {
-  background: none;
-  color: rgb(107,116,104);
-  text-decoration: none;
-}
-
-/* sub-label stays on one line, pinned to bottom if has-sub */
-.subnav .pill-sub {
-  display: block;
-  font-size: 0.65rem;
-  line-height: 1.2;
-  margin-top: 0.15rem;
-  color: rgb(182,113,47);
-  font-weight: 500;
-  white-space: nowrap; /* NEVER wrap sub-label */
-}
-
-/* pills with sub-label: pin the sub-label to bottom */
-.subnav .nav-link.has-sub {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* pushes sub-label to bottom */
-  align-items: center;
-  padding-top: 0.5rem;    /* shrink top padding */
-  padding-bottom: 0.25rem;/* minimal bottom padding */
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  line-height: 1.1;
-}
-
-/* larger‐screen override for has-sub pills */
-@media (min-width: 480px) {
-  .subnav .nav-link.has-sub {
-    padding: 0.8rem 7px 0.25rem; /* original desktop values */
-  }
-}
-
-/* larger‐screen override for plain pills */
-@media (min-width: 480px) {
-  .subnav .nav-link {
-    padding: 14px; /* original desktop value */
-  }
-}
-
-/* ─── Sub-nav micro breakpoint ─── */
-@media (max-width: 479.98px) {
-  .subnav .nav-link {
-    font-size: 0.7rem;
-    padding: 0.5rem 0.25rem; /* ensure three pills fit across */
-  }
-  .subnav .pill-sub {
-    font-size: 0.6rem; /* shrink sub-text if needed */
-  }
-}
-
-/* —— IPAD (MIDSIZE) —— */
-@media (min-width: 768px) {
-  .subnav .nav-pills { width: var(--pills-width-md); }
-  .subnav .navbar-brand img {
-  height: 80px;
-}
-}
-
-/* —— DESKTOP (LARGE) —— */
-@media (min-width: 992px) {
-  .subnav .nav-pills { width: var(--pills-width-lg); }
-}
-
-/* ---------- Sticky behaviour (override) ---------- */
-.sticky-subnav {
-  height: auto;
-  min-height: unset;
-  position: sticky;
-  top: var(--main-nav-h, 96px);
-  z-index: 1025;
-  background: var(--clr-nav-bg);
-}
-
-/* iPad landscape / midsize ≥768 px <992 px ---- */
-@media (max-width: 991.98px) {
-  :root { --main-nav-h: 80px; }
-}
-
-/* phones / xs <768 px  ------------------------ */
-@media (max-width: 767.98px) {
-  :root { --main-nav-h: 70px; }
-}
-
-/* very narrow screens <480 px ------------------ */
-@media (max-width: 479.98px) {
-  :root { --main-nav-h: 54px; }
-}
-
 
 /* =========================================================================
       UNIVERSAL HERO (all cottages + intro)
@@ -438,28 +287,6 @@ body{ padding-top:var(--navbar-h); }
   margin: 0 0 var(--title-info-gap) 0;
 }
 
-/* —— info line (“Sleeps 7 | …”) —— */
-.first-section p:first-of-type {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: rgb(47,54,50);
-  margin: 0 0 var(--info-text-gap) 0;
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-
-/* —— narrative paragraph —— */
-.first-section p:nth-of-type(2) {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-  color: rgb(204,209,199);
-  margin: 0;
-  text-align: left;
-  letter-spacing: 0.02em;
-}
-
 /* —— breakpoint tweaks —— */
 @media (min-width: 768px) {
   .first-section, .home-first-section {
@@ -467,14 +294,9 @@ body{ padding-top:var(--navbar-h); }
     --section-pad-sides: 5rem;
   }
 }
-@media (min-width: 992px) {
-  .first-section, .home-first-section {
-    --section-pad-sides: 7rem;
-  }
-}
 
 .wide-image img{
-  display:block;   /* kills inline gap under images */
+  display:block;
   width:100%;
   height:auto;
 }
@@ -483,11 +305,10 @@ body{ padding-top:var(--navbar-h); }
       HOMEPAGE for Cottages
    =============================================================== */
 .welcome-image{
-  /*background: url("/images/welcome.stacked.svg") top center / contain no-repeat;*/
-  background: url("/images/Welcome.svg") top center / contain no-repeat;
-  height: clamp(120px, 58vw, 420px); 
+  background: url("/images/Welcome.mobile.svg") top center / contain no-repeat;
+  height: clamp(120px, 58vw, 200px); 
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .home-first-section h1 {
@@ -496,7 +317,7 @@ body{ padding-top:var(--navbar-h); }
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 3.2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
 }
 
 .home-first-section p {
@@ -519,8 +340,8 @@ body{ padding-top:var(--navbar-h); }
 @media (min-width: 768px){
   .welcome-image{
     background-image: url("/images/Welcome.svg");
-    height: clamp(350px, 12vw, 180px); 
-    margin: 26px auto;
+    height: clamp(360px, 13vw, 180px); 
+    margin: 26px auto 60px auto;
   }
 }
 
@@ -528,18 +349,16 @@ body{ padding-top:var(--navbar-h); }
       OPTIONAL MODIFIER for the second hero
    =============================================================== */
 .alt-hero{
-  --section-pad-top:4rem;  /* override any variable you like */
-  --section-pad-bot:4.5rem;
-  background-image:url("/images/wainscoating.png"); /* same for now */
+  --section-pad-top:4rem;
+  background-image:url("/images/wainscoating.png");
 }
 .alt-hero > h3{
-  padding-bottom: 1rem;
   text-align: left;
   margin: 0 auto 0.5rem auto;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 3.2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   color: #e2e2d9;
 }
 
@@ -548,18 +367,18 @@ body{ padding-top:var(--navbar-h); }
    =============================================================== */
 .content .image-share {
   /* … your existing vars … */
-  --share-img-w:       33.333%;     /* ← column width */
-  --share-img-max-h:   30vh;        /* ← NEW: max height of the image */
+  --share-img-w:       33.333%;
+  --share-img-max-h:   30vh;
   --share-text-w:      66.666%;
   --share-text-align:  left;
 
   display:             flex;
   flex-wrap:           nowrap;
-  background-color:    #e2e2d9;
+  background-color:    rgb(219,219,205);
+  background-image: url("/images/contour.lines.svg");
   margin:              0;
 }
 
-/* reset any unwanted gutter/margins if you use a .row */
 .content .image-share .row {
   margin: 0;
   padding: 0;
@@ -571,8 +390,6 @@ body{ padding-top:var(--navbar-h); }
   max-width:           var(--share-text-w);
   padding:             2rem 0rem;        /* adjust as desired */
   box-sizing:          border-box;
-
-  /* apply text alignment variable */
   text-align:          var(--share-text-align);
 }
 
@@ -581,8 +398,8 @@ body{ padding-top:var(--navbar-h); }
   font-family:         'Raleway', sans-serif;
   font-weight:         700;
   font-size: 3.2rem;
-  color:               #575d62;
-  padding-left: 4rem;
+  color:               rgb(67, 67, 75);
+  padding: 0rem 2rem;
 }
 
 .content .image-share-text-col p {
@@ -590,27 +407,26 @@ body{ padding-top:var(--navbar-h); }
   font-family:         'Raleway', sans-serif;
   font-weight:         400;
   font-size:           1.4rem;
-  line-height:         1.5;
-  color:               #575d58;
-  padding-left: 4rem;
+  line-height:         1.7;
+  color:               rgb(67, 67, 75);
+  padding: 0rem 2rem;
 }
 
 /* —— IMAGE COLUMN —— */
 .content .image-share-img-col {
   flex:          0 0 var(--share-img-w);
   max-width:     var(--share-img-w);
-  /* remove overflow:hidden so shorter images won't get cut off */
   overflow:      visible;
 }
 
 .content .image-share-img-col img {
   display:           block;
-  width:             auto;               /* don’t stretch width */
-  height:            auto;               /* don’t stretch height */
-  max-height:        40rem; /* limit how tall it can get */
-  object-fit:        contain;            /* show whole image without cropping */
+  width:             auto;
+  height:            auto;
+  max-height:        40rem;
+  object-fit:        contain; 
   object-position:   center center;
-  margin-left:       auto;               /* push it flush to the right */
+  margin-left:       auto;
 }
 
 
@@ -619,7 +435,6 @@ body{ padding-top:var(--navbar-h); }
   .content .image-share {
     --share-img-w:     40%;
     --share-text-w:    60%;
-    /* you could also tweak --share-img-max-h here if desired */
   }
   .content .image-share-text-col {
     padding:           3rem;
@@ -631,7 +446,7 @@ body{ padding-top:var(--navbar-h); }
   .content .image-share {
     --share-img-w:     35%;
     --share-text-w:    65%;
-    /* desktop-specific max-height? override --share-img-max-h here */
+
   }
   .content .image-share-text-col {
     padding:           3rem;
@@ -646,6 +461,174 @@ body{ padding-top:var(--navbar-h); }
     flex:       none;
     width:      100%;
     max-width:  100%;
-    padding:    2rem;   /* adjust side padding for mobile if needed */
+    padding:    2rem;
   }
 }
+
+/* REVERSE OF IMAGE SHARE */
+
+.content .image-share {
+  display: flex;
+  flex-wrap: nowrap;
+  /* …your vars… */
+  --share-img-w: 33.333%;
+  --share-text-w: 66.666%;
+  --share-text-align: left;
+}
+
+/* reversed */
+.content .image-share--reverse {
+  flex-direction: row-reverse;
+  --share-text-align: right;
+}
+
+.content .image-share--reverse .image-share-img-col img {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.content .image-share-text-col {
+  text-align: var(--share-text-align);
+  padding-left: 30px;
+}
+
+.content .image-share--reverse {
+  flex-direction: row-reverse; 
+  --share-text-align: left;
+}
+
+.content .image-share--reverse .image-share-img-col img {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.content .image-share--reverse .image-share-img-col img {
+  content: url('/images/Kildrummy-Aerial-cropped.jpg');
+}
+
+@media (min-width: 992px) {
+  .content .image-share {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .content .image-share-text-col {
+    flex:      0 0 var(--share-text-w);
+    max-width: var(--share-text-w);
+  }
+
+  .content .image-share-img-col {
+    flex:        1 1 0;
+    max-width:   none;
+    overflow:    visible;
+  }
+}
+
+/* =========================================================================
+      Community Envolvment Logo
+   ========================================================================= */
+
+.cottage-gallery-title {
+  position: relative;            
+  width: 100%;
+  height: 140px;
+  background-color: rgb(25, 38, 25);
+
+  /* Edge-to-edge lines on desktop/tablet */
+  background-image: url("/images/bracket.lines.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; 
+}
+
+/* Lettering sizing at various breakpoints */
+.cottage-gallery-title .gallery-lettering {
+  max-height: 60px;
+  width: auto;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .cottage-gallery-title .gallery-lettering {
+    max-height: 70px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .cottage-gallery-title .gallery-lettering {
+    max-height: 80px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .cottage-gallery-title .gallery-lettering {
+    max-height: 100px;
+  }
+}
+
+/* ―― MOBILE LEAK (≤480px) ―― */
+@media (max-width: 768px) {
+  .cottage-gallery-title {
+    /* remove the background SVG */
+    background-image: none;
+  }
+
+  .cottage-gallery-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 130vw;              /* extend 10vw beyond both sides */
+    height: 100%;
+    background: url("/images/bracket.lines.svg")
+                no-repeat center center;
+    background-size: 100% auto;
+    transform: translateX(-50%);/* center the oversized pseudo-element */
+    z-index: 0;
+  }
+
+  .cottage-gallery-title .gallery-lettering {
+    position: relative;
+    z-index: 1;                /* keep lettering on top */
+  }
+}
+
+@media (max-width: 550px) {
+  .cottage-gallery-title {
+    /* remove the background SVG */
+    background-image: none;
+  }
+
+  .cottage-gallery-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150vw;              /* extend 10vw beyond both sides */
+    height: 100%;
+    background: url("/images/bracket.lines.svg")
+                no-repeat center center;
+    background-size: 100% auto;
+    transform: translateX(-50%);/* center the oversized pseudo-element */
+    z-index: 0;
+  }
+
+  .cottage-gallery-title .gallery-lettering {
+    position: relative;
+    z-index: 1;                /* keep lettering on top */
+  }
+}
+
+
+
+
+
+
+
+
