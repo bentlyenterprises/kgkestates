@@ -957,6 +957,11 @@ body{ padding-top:0rem; }
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
