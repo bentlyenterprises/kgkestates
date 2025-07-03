@@ -947,6 +947,12 @@ body{ padding-top:0rem; }
    ========================================================================= */
 
 
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(25, 38, 25);
+}
+
 .logo-grid-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -967,8 +973,8 @@ body{ padding-top:0rem; }
   background: #f7f7f7;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* center vertically */
-  align-items: center;      /* center horizontally */
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: inherit;
   padding: 0.75rem;
@@ -976,6 +982,7 @@ body{ padding-top:0rem; }
   transition: transform .2s;
   background-color: rgb(86, 98, 90);
 }
+
 .square:hover {
   background-color: rgb(60, 70, 65);
 }
@@ -992,12 +999,12 @@ body{ padding-top:0rem; }
 .square .title {
   font-size: 1.7rem;
   text-align: center;
-  font-family:         'Athelas', sans-serif;
-  font-weight:         900;
+  font-family: 'Athelas', sans-serif;
+  font-weight: 900;
   color: #e2e2d9;
 }
 
-/* no-image modifier: you can style it differently if needed */
+/* no-image modifier */
 .square.no-image img {
   display: none;
 }
@@ -1005,4 +1012,38 @@ body{ padding-top:0rem; }
 /* center the last item in the middle column */
 .last-square {
   grid-column: 2 / 3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .logo-grid-container {
+    padding: 0 1rem;
+  }
+  
+  .logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .square .title {
+    font-size: 1.2rem;
+  }
+  
+  .last-square {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-grid-container {
+    padding: 0 0.5rem;
+  }
+  
+  .logo-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .square .title {
+    font-size: 1.4rem;
+  }
 }

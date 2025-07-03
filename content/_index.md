@@ -282,88 +282,43 @@ to help with restoration of the park after Storm Arwin. Staff have been offered 
 <div class="logo-grid-container">
   <div class="logo-grid">
     <!-- with image + title -->
-    <a href="https://avcr.org.uk/" class="square" target="_blank"
-  rel="noopener noreferrer">
-    <img
-      src="/images/Alford-Valley-Preferred-Totem.png"
-      alt="Brand 1"
-      width="250"
-      height="auto"
-        target="_blank"
-  rel="noopener noreferrer"
-    >
+    <a href="https://avcr.org.uk/" class="square" target="_blank" rel="noopener noreferrer">
+      <img src="/images/Alford-Valley-Preferred-Totem.png" alt="Brand 1" width="250" height="auto">
       <span class="title">Alford Valley Community Railway</span>
     </a>
-    <!-- no-image: just centered text -->
-    <a href="https://www.facebook.com/groups/726436874105787/events" class="square no-image" target="_blank"
-  rel="noopener noreferrer">
-      <span class="title">Cushie Picnic and Games</span>
-    </a>
-    <!-- no-image: just centered text -->
-    <a href="https://www.facebook.com/p/Corgarff-Picnic-Games-100064911813508/" class="square no-image" target="_blank"
-  rel="noopener noreferrer">
-      <span class="title">Corgarff Picnic and Games</span>
-    </a>
-        <!-- with image + title -->
-    <a href="https://www.facebook.com/alfordacademypipeband/" class="square"  target="_blank"
-  rel="noopener noreferrer">
-      <img
-        src="/images/AlfordAcademyPipeBand.png"
-        alt="Brand 1"
-        width="200"
-        height="auto"
-      >
+    <a href="https://www.facebook.com/alfordacademypipeband/" class="square" target="_blank" rel="noopener noreferrer">
+      <img src="/images/AlfordAcademyPipeBand.png" alt="Brand 1" width="200" height="auto">
       <span class="title">Alford Academy Pipe Band</span>
     </a>
-    <!-- another with image + title -->
-    <a href="https://www.facebook.com/ValeOfAlfordBowlingClub/" class="square" target="_blank"
-  rel="noopener noreferrer">
-            <img
-        src="/images/vale.alford.bowling.club.png"
-        alt="Brand 1"
-        width="200"
-        height="auto"
-      >
+    <a href="https://www.facebook.com/ValeOfAlfordBowlingClub/" class="square" target="_blank" rel="noopener noreferrer">
+      <img src="/images/vale.alford.bowling.club.png" alt="Brand 1" width="200" height="auto">
       <span class="title">Vale of Alford Bowling Club</span>
     </a>
-    <!-- no-image: just centered text -->
-    <a href="https://www.towie.aberdeenshire.sch.uk/" class="square no-image" target="_blank"
-  rel="noopener noreferrer">
-      <span class="title">Towie and Lumsden Schools</span>
-    </a>
-    <!-- no-image: just centered text -->
-    <a href="http://www.aberdeensinfonietta.com/" class="square no-image" target="_blank"
-  rel="noopener noreferrer">
-      <span class="title">Aberdeen Sinfonietta Group</span>
-    </a>
-    <!-- another with image + title -->
-    <a href="https://www.gtm.org.uk/" class="square" target="_blank"
-  rel="noopener noreferrer">
-    <img
-      src="/images/gtm_logo.svg"
-      alt="Brand 1"
-      width="250"
-      height="auto"
-    >
+    <a href="https://www.gtm.org.uk/" class="square" target="_blank" rel="noopener noreferrer">
+      <img src="/images/gtm_logo.svg" alt="Brand 1" width="250" height="auto">
       <span class="title">Grampian Transport Museum</span>
     </a>
-    <!-- no-image: just centered text -->
-    <a href="https://www.woodlandtrust.org.uk/" class="square no-image" target="_blank"
-  rel="noopener noreferrer">
-      <span class="title">Murray Park, Alford
-</span>
-    </a>
-    <!-- …etc… -->
-    <!-- 10th, centered-only too -->
-    <a href="https://www.lonach.org/" class="square last-square" target="_blank"
-  rel="noopener noreferrer">
-      <img
-        src="/images/lonach.svg"
-        alt="Brand 1"
-        width="250"
-        height="auto"
-      >
+    <a href="https://www.lonach.org/" class="square" target="_blank" rel="noopener noreferrer">
+      <img src="/images/lonach.svg" alt="Brand 1" width="70" height="auto">
       <span class="title">Lonach Highland Games</span>
+    </a>
+    <a href="http://www.aberdeensinfonietta.com/" class="square no-image" target="_blank" rel="noopener noreferrer">
+      <span class="title">Aberdeen Sinfonietta Group</span>
+    </a>
+    <a href="https://www.facebook.com/p/Corgarff-Picnic-Games-100064911813508/" class="square no-image" target="_blank" rel="noopener noreferrer">
+      <span class="title">Corgarff Picnic and Games</span>
+    </a>
+    <a href="https://www.facebook.com/groups/726436874105787/events" class="square no-image" target="_blank" rel="noopener noreferrer">
+      <span class="title">Cushie Picnic and Games</span>
+    </a>
+    <a href="https://www.woodlandtrust.org.uk/" class="square no-image" target="_blank" rel="noopener noreferrer">
+      <span class="title">Murray Park, Alford</span>
+    </a>
+    <a href="https://www.lumsden.aberdeenshire.sch.uk/" class="square no-image" target="_blank" rel="noopener noreferrer">
+      <span class="title">Lumsden School</span>
+    </a>
+    <a href="https://www.towie.aberdeenshire.sch.uk/" class="square no-image" target="_blank" rel="noopener noreferrer">
+      <span class="title">Towie School</span>
     </a>
   </div>
 </div>
