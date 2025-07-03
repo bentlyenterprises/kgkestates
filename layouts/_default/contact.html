@@ -1,0 +1,78 @@
+{{ define "main" }}
+
+  <!-- Hero image -->
+  <section class="contact-hero-banner">
+    <img src="{{ "images/privacy-hdr.jpg" | relURL }}"
+         alt="Glenkindie Estate">
+  </section>
+
+
+<!-- Get in Touch Heading + Divider -->
+<section class="contact-intro">
+  <section class="contact-title">
+    <div class="container">
+      <h1 class="mb-3">Get in Touch</h1>
+    </div>
+  </section>
+
+  <!-- Contact Info + Map Box -->
+  <section class="contact-section pb-5">
+    <div class="container">
+      <!-- inner box with white gutters around it -->
+      <div class="contact-box mx-auto p-4">
+
+        <div class="row gx-5">
+
+          <!-- Left column: logo, info, separator, more info, social links -->
+          <div class="col-lg-4 text-center mb-4 contact-left-column">
+            <img
+              src="{{ "images/logosicons/glenkindie.cottages.logo.svg" | relURL }}"
+              alt="Logo"
+              class="contact-logo mb-3"
+              width="150">
+
+            <div class="contact-info">
+              <!-- top chunk of text -->
+              <p class="contact-desc">
+                <!-- put your first bit of text here -->
+                We welcome any questions or enquiries you may have.
+              </p>
+
+              <!-- thin separator line -->
+              <hr class="contact-separator">
+
+              <!-- bottom chunk of text -->
+              <p class="contact-sub-desc">
+                <!-- more info below the line -->
+                GlenKindie Holiday Cottages,<br>
+                GlenKindie, Aberdeenshire, AB33 8ST<br><br>
+                M: 07725 796 445<br>
+                E: holidaycottages@glenkindieestate.co.uk<br>
+              </p>
+
+              <!-- social icons -->
+              <div class="social-links mt-3">
+                <a href="https://www.facebook.com/GlenkindieEstateHolidayCottages/" aria-label="Facebook" target="_blank">
+                  <img src="{{ "images/logosicons/facebook.svg" | relURL }}" alt="Facebook" width="30">
+                </a>
+                <a href="https://www.instagram.com/glenkindieholidaycottages_/" aria-label="Instagram" target="_blank">
+                  <img src="{{ "images/logosicons/instagram.svg" | relURL }}" alt="Instagram" width="30">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right column: map with white border + shadow -->
+          <div class="col-lg-8">
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2160.522845936339!2d-2.9334483867293883!3d57.21357237354997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4885cb103deccf83%3A0xc86e37580d4550ce!2sGlenkindie%20Estate%20Holiday%20Cottages%20-%20Braemorlich!5e0!3m2!1sen!2suk!4v1748527924325!5m2!1sen!2suk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+{{ end }}

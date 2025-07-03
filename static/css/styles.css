@@ -328,7 +328,7 @@ body{ padding-top:0rem; }
   margin: 0;
   text-align: left;
   letter-spacing: 0.03em;
-  padding-bottom: 2rem;
+  padding-bottom: 1.3rem;
   line-height: 2.3rem;
 }
 
@@ -424,7 +424,7 @@ body{ padding-top:0rem; }
   display:           block;
   width:             auto;
   height:            auto;
-  max-height:        40rem;
+  max-height:        42rem;
   object-fit:        contain; 
   object-position:   center center;
   margin-left:       auto;
@@ -441,12 +441,12 @@ body{ padding-top:0rem; }
     padding: 0 1rem 0 3rem;
   }
   .content .image-share-text-col p {
-    padding: 0 1rem 0 3rem;
+    padding: 0 4rem 0 3rem;
   }
 }
 
 /* —— DESKTOP (≥992px) OVERRIDES —— */
-@media (min-width: 992px) {
+@media (min-width: 2000px) {
   .content .image-share {
     --share-img-w:     35%;
     --share-text-w:    65%;
@@ -456,6 +456,7 @@ body{ padding-top:0rem; }
     padding: 3rem 0 0 0;
   }
 }
+
 
 @media (max-width: 991px) {
   .content .image-share-img-col {
@@ -468,6 +469,7 @@ body{ padding-top:0rem; }
     padding:    2rem;
   }
 }
+
 
 /* REVERSE OF IMAGE SHARE */
 
@@ -535,11 +537,10 @@ body{ padding-top:0rem; }
 .cottage-gallery-title {
   position: relative;            
   width: 100%;
-  height: 140px;
+  height: 120px;
   background-color: rgb(25, 38, 25);
 
-  /* Edge-to-edge lines on desktop/tablet */
-  background-image: url("/images/bracket.lines.svg");
+  /*background-image: url("/images/bracket.lines.svg");*/
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% auto;
@@ -588,18 +589,18 @@ body{ padding-top:0rem; }
     position: absolute;
     top: 0;
     left: 50%;
-    width: 130vw;              /* extend 10vw beyond both sides */
+    width: 130vw;
     height: 100%;
-    background: url("/images/bracket.lines.svg")
-                no-repeat center center;
+    /*background: url("/images/bracket.lines.svg")
+                no-repeat center center;*/
     background-size: 100% auto;
-    transform: translateX(-50%);/* center the oversized pseudo-element */
+    transform: translateX(-50%);
     z-index: 0;
   }
 
   .cottage-gallery-title .gallery-lettering {
     position: relative;
-    z-index: 1;                /* keep lettering on top */
+    z-index: 1;
   }
 }
 
@@ -614,25 +615,256 @@ body{ padding-top:0rem; }
     position: absolute;
     top: 0;
     left: 50%;
-    width: 150vw;              /* extend 10vw beyond both sides */
+    width: 150vw;
     height: 100%;
-    background: url("/images/bracket.lines.svg")
-                no-repeat center center;
+    /*background: url("/images/bracket.lines.svg")
+                no-repeat center center; */
     background-size: 100% auto;
-    transform: translateX(-50%);/* center the oversized pseudo-element */
+    transform: translateX(-50%)
     z-index: 0;
   }
 
   .cottage-gallery-title .gallery-lettering {
     position: relative;
-    z-index: 1;                /* keep lettering on top */
+    z-index: 1;
   }
 }
 
 
+/* =========================================================================
+      Contact Page
+   ========================================================================= */
+.contact-hero-banner{
+  width: 100%;
+  overflow: hidden;
+}
+
+.contact-hero-banner img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 992px){
+  .contact-hero-banner img{
+    max-height: 70vh;
+    object-fit: contain;
+  }
+}
+
+.contact-intro {
+  text-align: left;
+  padding: 4rem 2rem;  /* more generous spacing */
+  background-image: url("/images/wainscoating.withtoprail.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  font-family: 'Raleway', sans-serif;
+  color: #e2e2d9;
+  margin: 0;
+  text-align: left;
+  letter-spacing: 0.02em;
+}
+
+.contact-intro h1 {
+  text-align: center;
+  margin: 0 auto 1.5rem auto;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 2.7rem;
+
+}
+.contact-intro p {
+  max-width: 1100px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.contact-title {
+  margin-bottom: 3rem;
+}
 
 
+.contact-box {
+  background-color: transparent;
+  border-radius: 0rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0rem;
+  color: white;
+}
+
+/* -------------------------------------------------------
+   LEFT COLUMN – logo spacing, separator, social links
+-------------------------------------------------------- */
+.contact-left-column{
+  padding-right: 20px;
+}
+
+.contact-logo {
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+.contact-separator {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 0;        
+}
+
+.contact-info {
+  font-family: 'Raleway', sans-serif;
+  color: #e2e2d9;
+  margin-top:1rem;
+}
+
+.contact-desc {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  margin-top:1rem;
+}
+
+.contact-sub-desc {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  margin-top:2rem;
+  font-size: 0.8rem;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+/* -------------------------------------------------------
+   RIGHT COLUMN – map border + shadow
+-------------------------------------------------------- */
+
+.map-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 0rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  margin: 0 5px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  aspect-ratio: 12/9;        
+  border: 0;
+  border-radius: 0rem;
+  display: block;
+}
 
 
+/* =========================================================================
+      Green Title Strip home Page
+   ========================================================================= */
+.support-groups {
+  position: relative;            
+  width: 100%;
+  height: 120px;
+  background-color: rgb(25, 38, 25);
+  color: rgb(219,219,205);
+  padding: 2.4rem 0 0rem 0;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
 
+.link-spot {
+  position: relative;            
+  width: 100%;
+  height: 120px;
+  background-color: rgb(25, 38, 25);
+  color: rgb(234,180,86);
+  padding: 2.4rem 0 0rem 0;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
 
+.link-spot a {
+  color: rgb(230,183,97);
+  text-decoration: none;
+}
+
+.image-text-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 50px;
+  background-color:    rgb(219,219,205);
+}
+
+.image-text-section .image-col {
+  flex: 0 0 33.333%; 
+}
+
+.image-text-section .image-col img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-left: 30px;
+}
+
+.image-text-section .text-col {
+  flex: 1;
+}
+
+.image-text-section {
+  /* … your existing vars … */
+  --share-img-w:       33.333%;
+  --share-img-max-h:   30vh;
+  --share-text-w:      66.666%;
+  --share-text-align:  left;
+
+  display:             flex;
+  flex-wrap:           nowrap;
+  background-color:    rgb(219,219,205);
+  background-image: url("/images/contour.lines.svg");
+  margin:              0;
+}
+
+.image-text-section h2 {
+  margin-bottom:       1rem;
+  font-family:         'Athelas', sans-serif;
+  font-weight:         600;
+  font-size: 2.7rem;
+  color:               rgb(67, 67, 75);
+  padding: 0rem 3rem 0.5rem 1rem;
+  text-align:left;
+}
+
+.image-text-section p {
+  margin:              0 0 1rem;
+  font-family:         'Raleway', sans-serif;
+  font-weight:         400;
+  font-size:           1.3rem;
+  line-height:         2.3rem;
+  color:               rgb(67, 67, 75);
+  padding: 0rem 1rem;
+  text-align:left;
+}
+
+@media (max-width: 1000px) {
+  .image-text-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .image-text-section .image-col,
+  .image-text-section .text-col {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  .image-text-section .image-col img {
+    /* never less than 200px, ideally 60vw, never more than 300px */
+    width: clamp(400px, 60vw, 500px);
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+}
