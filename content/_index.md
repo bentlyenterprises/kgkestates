@@ -198,14 +198,17 @@ compete in local school competitions.
 </section>
 
 <div class="link-spot">
-	<a href="https://www.towie.aberdeenshire.sch.uk/" target="_blank" rel="noopener noreferrer">https://www.towie.aberdeenshire.sch.uk/</a>
+	<a href="www.towie.aberdeenshire.sch.uk" target="_blank" rel="noopener noreferrer">www.towie.aberdeenshire.sch.uk</a>
+</div>
+<div class="link-spot">
+	<a href="www.lumsden.aberdeenshire.sch.uk" target="_blank" rel="noopener noreferrer">www.lumsden.aberdeenshire.sch.uk</a>
 </div>
 
 <section class="image-text-section">
   <div class="text-col" style="padding-left: 1rem;">
     <h2>Aberdeen Sinfonietta Group</h2>
     <p>
-      A locally run musical ensemble to help facilitate
+      a locally run musical ensemble to help facilitate
 concerts to raise awareness of their group
     </p>
   </div>
@@ -216,14 +219,50 @@ concerts to raise awareness of their group
 </div>
 
 <section class="image-text-section">
-  <div class="text-col" style="padding-left: 1rem;">
+  <div class="image-col">
+<img
+  src="/images/gtm_logo.svg"
+  alt="Descriptive alt text"
+  style="width:350px; height:auto;"
+>
+  </div>
+  <div class="text-col">
     <h2>Grampian Transport Museum</h2>
     <p>
-      (NEED TEXT HERE)
+      a locally run musical ensemble to help facilitate concerts to raise awareness of their group
     </p>
   </div>
 </section>
 
+<div class="link-spot">
+	<a href="https://www.gtm.org.uk/" target="_blank" rel="noopener noreferrer">https://www.gtm.org.uk/</a>
+</div>
+
+<section class="image-text-section">
+  <div class="text-col" style="padding-left: 1rem;">
+    <h2>Murray Park, Alford</h2>
+    <p>
+to help with restoration of the park after Storm Arwin. Staff have been offered to help with the repair/restoration works too.
+    </p>
+  </div>
+</section>
+
+<div class="link-spot">
+	<a href="woodlandtrust.org.uk" target="_blank" rel="noopener noreferrer">woodlandtrust.org.uk</a>
+</div>
+
+<section class="image-text-section">
+  <div class="image-col">
+  	<img
+  src="/images/lonach.svg"
+  alt="Descriptive alt text"
+  style="width:160px; height:auto;"
+>
+  </div>
+  <div class="text-col">
+    <h2>Lonach Highland Games</h2>
+  </div>
+</section>
 
 
 
