@@ -807,19 +807,24 @@ body{ padding-top:0rem; }
 }
 
 .link-spot {
-  position: relative;            
+  position: relative;
   width: 100%;
-  height: 72px;
+  height: auto;
+  min-height: 72px;
   background-color: rgb(25, 38, 25);
   color: rgb(234,180,86);
-  padding: 1rem 0 0rem 0;
+  padding: 1rem 1rem;
   font-weight: 600;
   font-size: 1.6rem;
+  box-sizing: border-box;
 }
 
 .link-spot a {
+  display: block;
   color: rgb(230,183,97);
   text-decoration: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;       
 }
 
 .image-text-section {
