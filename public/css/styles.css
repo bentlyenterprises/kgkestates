@@ -947,40 +947,46 @@ body{ padding-top:0rem; }
    ========================================================================= */
 
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: rgb(25, 38, 25);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .logo-grid-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 3rem;
-  box-sizing: border-box;
   background-color: rgb(25, 38, 25);
 }
 
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 10px;
+  width: 100%;
 }
 
 /* universal square setup */
 .square {
   aspect-ratio: 1;
-  background: #f7f7f7;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   color: inherit;
-  padding: 0.75rem;
-  box-sizing: border-box;
+  padding: 10px;
   transition: transform .2s;
   background-color: rgb(86, 98, 90);
+  overflow: hidden;
 }
 
 .square:hover {
@@ -993,15 +999,18 @@ body {
   max-height: 60%;
   margin-bottom: 0.5rem;
   display: block;
+  object-fit: contain;
 }
 
 /* titles */
 .square .title {
-  font-size: 1.7rem;
+  font-size: clamp(0.7rem, 2.5vw, 1.7rem);
   text-align: center;
   font-family: 'Athelas', sans-serif;
   font-weight: 900;
   color: #e2e2d9;
+  word-break: break-word;
+  width: 100%;
 }
 
 /* no-image modifier */
@@ -1015,35 +1024,27 @@ body {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .logo-grid-container {
-    padding: 0 1rem;
+    padding: 0 5px;
   }
   
   .logo-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: 5px;
   }
   
-  .square .title {
-    font-size: 1.2rem;
+  .square {
+    padding: 5px;
+  }
+  
+  .square img {
+    max-width: 50%;
+    max-height: 50%;
+    margin-bottom: 0.25rem;
   }
   
   .last-square {
     grid-column: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo-grid-container {
-    padding: 0 0.5rem;
-  }
-  
-  .logo-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .square .title {
-    font-size: 1.4rem;
   }
 }
