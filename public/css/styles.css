@@ -910,27 +910,27 @@ body{ padding-top:0rem; }
 /* =========================================================================
       Community description section
    ========================================================================= */
-/* full–width wrapper: side-bg */
+
 .boxed-section {
-  background-color: rgb(25, 38, 25);   /* side background color */
-  padding: 1rem 3rem;             /* vertical spacing around the box */
+  background-color: rgb(25, 38, 25);   
+  padding: 1rem 3rem;          
 }
 
 @media (max-width: 600px) {
   .boxed-section {
-    padding: 1rem 1rem; /* Reduce horizontal padding on mobile */
+    padding: 1rem 1rem; 
   }
 }
 
 /* inner container: box-bg */
 .boxed-content {
   background-color: rgb(86, 98, 90);
-  max-width: 1000px;            /* or whatever width you prefer */
-  margin: 0 auto;              /* center it */
-  padding: 1.5rem;             /* space inside the box */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional depth */
-  border-radius: 4px;          /* optional rounding */
-  text-align: center;          /* if you want centered text */
+  max-width: 1000px; 
+  margin: 0 auto;         
+  padding: 1.5rem;         
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+  border-radius: 4px;        
+  text-align: center;        
   font-size: 1.7rem;
   text-align: center;
   font-family:         'Athelas', sans-serif;
@@ -939,7 +939,7 @@ body{ padding-top:0rem; }
 }
 
 .boxed-content p {
-  text-align: center;          /* if you want centered text */
+  text-align: center;          
   font-size: 1.3rem;
   text-align: center;
   font-family:         'Athelas', sans-serif;
@@ -1004,7 +1004,6 @@ body {
   background-color: rgb(60, 70, 65);
 }
 
-/* images—if present—sit above the title */
 .square img {
   max-width: 60%;
   max-height: 60%;
@@ -1024,17 +1023,14 @@ body {
   width: 100%;
 }
 
-/* no-image modifier */
 .square.no-image img {
   display: none;
 }
 
-/* center the last item in the middle column */
 .last-square {
   grid-column: 2 / 3;
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
 
   .square .title {
