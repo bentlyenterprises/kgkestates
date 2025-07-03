@@ -198,10 +198,10 @@ compete in local school competitions.
 </section>
 
 <div class="link-spot">
-	<a href="www.towie.aberdeenshire.sch.uk" target="_blank" rel="noopener noreferrer">www.towie.aberdeenshire.sch.uk</a>
+	<a href="https://www.towie.aberdeenshire.sch.uk/" target="_blank" rel="noopener noreferrer">www.towie.aberdeenshire.sch.uk</a>
 </div>
 <div class="link-spot">
-	<a href="www.lumsden.aberdeenshire.sch.uk" target="_blank" rel="noopener noreferrer">www.lumsden.aberdeenshire.sch.uk</a>
+	<a href="https://www.lumsden.aberdeenshire.sch.uk/" target="_blank" rel="noopener noreferrer">www.lumsden.aberdeenshire.sch.uk</a>
 </div>
 
 <section class="image-text-section">
@@ -248,7 +248,7 @@ to help with restoration of the park after Storm Arwin. Staff have been offered 
 </section>
 
 <div class="link-spot">
-	<a href="woodlandtrust.org.uk" target="_blank" rel="noopener noreferrer">woodlandtrust.org.uk</a>
+	<a href="https://www.woodlandtrust.org.uk" target="_blank" rel="noopener noreferrer">woodlandtrust.org.uk</a>
 </div>
 
 <section class="image-text-section">
@@ -263,6 +263,10 @@ to help with restoration of the park after Storm Arwin. Staff have been offered 
     <h2>Lonach Highland Games</h2>
   </div>
 </section>
+
+<div class="link-spot">
+  <a href="https://www.lonach.org/" target="_blank" rel="noopener noreferrer">https://www.lonach.org/</a>
+</div>
 
 
 
