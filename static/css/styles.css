@@ -1025,8 +1025,12 @@ body {
 
 /* Responsive design */
 @media (max-width: 600px) {
+
+  .square .title {
+  font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+}
   .logo-grid-container {
-    padding: 0 5px;
+    padding: 0 0px;
   }
   
   .logo-grid {
@@ -1047,4 +1051,10 @@ body {
   .last-square {
     grid-column: auto;
   }
+}
+
+@media (max-width: 402px) {
+.support-groups {
+  height: 160px;
+}
 }
