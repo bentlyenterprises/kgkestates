@@ -577,7 +577,7 @@ body{ padding-top:0rem; }
   background-position: center center;
   background-size: 100% auto;
 
-  padding: 0;
+  padding-top: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -800,9 +800,9 @@ body{ padding-top:0rem; }
   width: 100%;
   height: 120px;
   background-color: rgb(25, 38, 25);
-  color: rgb(82,101,81);
+  color: #e2e2d9;
   padding: 2.4rem 0 0rem 0;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 1.6rem;
 }
 
@@ -905,4 +905,104 @@ body{ padding-top:0rem; }
     margin: 0 auto;
     padding-bottom: 20px;
   }
+}
+
+/* =========================================================================
+      Community description section
+   ========================================================================= */
+/* full–width wrapper: side-bg */
+.boxed-section {
+  background-color: rgb(25, 38, 25);   /* side background color */
+  padding: 1rem 3rem;             /* vertical spacing around the box */
+}
+
+/* inner container: box-bg */
+.boxed-content {
+  background-color: rgb(86, 98, 90);
+  max-width: 1000px;            /* or whatever width you prefer */
+  margin: 0 auto;              /* center it */
+  padding: 1.5rem;             /* space inside the box */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* optional depth */
+  border-radius: 4px;          /* optional rounding */
+  text-align: center;          /* if you want centered text */
+  font-size: 1.7rem;
+  text-align: center;
+  font-family:         'Athelas', sans-serif;
+  font-weight:         900;
+  color: #e2e2d9;
+}
+
+.boxed-content p {
+  text-align: center;          /* if you want centered text */
+  font-size: 1.3rem;
+  text-align: center;
+  font-family:         'Athelas', sans-serif;
+  font-weight:         200;
+  color: #e2e2d9;
+  padding-top: 15px;
+}
+
+/* =========================================================================
+      Logos Grid
+   ========================================================================= */
+
+
+.logo-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  box-sizing: border-box;
+  background-color: rgb(25, 38, 25);
+}
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* universal square setup */
+.square {
+  aspect-ratio: 1;
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* center vertically */
+  align-items: center;      /* center horizontally */
+  text-decoration: none;
+  color: inherit;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  transition: transform .2s;
+  background-color: rgb(86, 98, 90);
+}
+.square:hover {
+  background-color: rgb(60, 70, 65);
+}
+
+/* images—if present—sit above the title */
+.square img {
+  max-width: 60%;
+  max-height: 60%;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* titles */
+.square .title {
+  font-size: 1.7rem;
+  text-align: center;
+  font-family:         'Athelas', sans-serif;
+  font-weight:         900;
+  color: #e2e2d9;
+}
+
+/* no-image modifier: you can style it differently if needed */
+.square.no-image img {
+  display: none;
+}
+
+/* center the last item in the middle column */
+.last-square {
+  grid-column: 2 / 3;
 }
