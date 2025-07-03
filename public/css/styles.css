@@ -916,6 +916,12 @@ body{ padding-top:0rem; }
   padding: 1rem 3rem;             /* vertical spacing around the box */
 }
 
+@media (max-width: 600px) {
+  .boxed-section {
+    padding: 1rem 1rem; /* Reduce horizontal padding on mobile */
+  }
+}
+
 /* inner container: box-bg */
 .boxed-content {
   background-color: rgb(86, 98, 90);
