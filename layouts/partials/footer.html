@@ -1,6 +1,4 @@
 <footer>
-
-
   <!-- Footer bar (no Bootstrap utilities) -->
   <div class="footer-bar">
     <div class="footer-inner">
@@ -9,16 +7,20 @@
         <img src="{{ "images/kgk.monogram.gold.svg" | relURL }}" alt="Logo" height="70">
       </a>
 
-      <!-- Row1 – property name + address -->
-
+      <!-- Contact link pushed right via .footer-contact -->
+      <ul class="navbar-nav footer-contact align-items-lg-center gap-lg-3">
+        <li class="nav-item">
+          <a class="nav-link" href="/contact/">CONTACT</a>
+        </li>
+      </ul>
 
       <!-- Social icons -->
       <div class="footer-social">
         <a href="#" aria-label="Facebook" target="_blank">
           <img src="{{ "images/facebook.svg" | relURL }}" alt="Facebook" height="38" width="38">
         </a>
-        <a href="#" aria-label="Instagram" target="_blank">
-          <img src="{{ "images/x.twitter.svg" | relURL }}" alt="Instagram" height="38" width="38">
+        <a href="#" aria-label="X (Twitter)" target="_blank">
+          <img src="{{ "images/x.twitter.svg" | relURL }}" alt="X (Twitter)" height="38" width="38">
         </a>
         <a href="#" aria-label="Instagram" target="_blank">
           <img src="{{ "images/instagram.svg" | relURL }}" alt="Instagram" height="38" width="38">
@@ -26,12 +28,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Legal links strip --><!--
-<div class="footer-legal">
-  <a href="/privacy-policy/">Privacy &amp; Cookie Policy</a>
-  <a href="/terms-conditions/">Terms &amp; Conditions</a>
-</div>-->
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

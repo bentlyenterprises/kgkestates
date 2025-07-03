@@ -206,6 +206,38 @@ body{ padding-top:0rem; }
   text-decoration: underline;
 }
 
+.nav-link {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: var(--clr-accent);
+  border-color: var(--clr-accent);
+  font-size: 19px;
+}
+.navbar-nav {
+  margin-left: auto;
+}
+.nav-link:is(:hover, :focus) {
+  color: #fff;
+  background: transparent;
+  border-color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  /* push CONTACT to the right */
+  .footer-contact {
+    order: 2;
+    margin-left: auto;
+  }
+  /* keep socials after it */
+  .footer-social {
+    order: 3; 
+    /* remove any auto-margin here if you added one before */
+    margin-left: 1.5rem; /* or whatever gap you prefer */
+  }
+}
+
 /* =========================================================================
       HERO CAROUSEL
    ========================================================================= */
