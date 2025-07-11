@@ -2,8 +2,8 @@
 title: "Home"
 heroImages:
   - "/images/home-hero/GlenkindieHouseHomeHero.opt.jpg"
-  - "/images/Landscape.opt.jpg"
   - "/images/Crops.opt.jpg"
+  - "/images/Landscape.opt.jpg"
 ---
 
 <!--   - "/images/home-hero/KildrummyRuinsHomeHero3.opt.jpg"
