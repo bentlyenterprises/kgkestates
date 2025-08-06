@@ -1,20 +1,58 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark main-nav fixed-top shadow-sm">
     <div class="container-fluid">
+      <!-- Mobile toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <!-- Toggler first for mobile -->
+      <!-- Collapsible navbar content -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav-wrapper">
+          <!-- Left nav items -->
+          <div class="navbar-nav-left">
+            <div class="nav-group">
+              <a class="nav-link main-link" href="/about">The Estates</a>
+              <div class="sub-links">
+                <a class="sub-link" href="/about/history">Explore the Area</a>
+                <!--<a class="sub-link" href="/about/history">Careers</a>-->
+              </div>
+            </div>
+            
+            <div class="nav-group">
+              <a class="nav-link main-link" href="/services">Visit</a>
+              <div class="sub-links">
+                <a class="sub-link" href="/services/estate-management">Glenkindie Cottages</a>
+                <a class="sub-link" href="/services/consultation">Plan an Experience</a>
+              </div>
+            </div>
+          </div>
 
+          <!-- Brand centered -->
+          <a class="navbar-brand" href="{{ "/" | relURL }}">
+            <img src="{{ "images/kgk.estates.logo.svg" | relURL }}" alt="Logo" height="40">
+          </a>
 
-
-
-        <!-- Brand centered -->
-        <a class="navbar-brand mx-auto order-0" href="{{ "/" | relURL }}">
-          <img src="{{ "images/kgk.estates.logo.svg" | relURL }}" alt="Logo" height="40">
-        </a>
-
-
+          <!-- Right nav items -->
+          <div class="navbar-nav-right">
+            <div class="nav-group">
+              <a class="nav-link main-link" href="/properties">Stewardship</a>
+              <div class="sub-links">
+                <a class="sub-link" href="/properties/available">Nature & Wildlife</a>
+                <a class="sub-link" href="/properties/developments">Community Involvment</a>
+              </div>
+            </div>
+            
+            <div class="nav-group">
+              <a class="nav-link main-link" href="/contact">Contact</a>
+              <div class="sub-links">
+                <!--<a class="sub-link" href="/contact">Get In Touch</a>-->
+                <!--<a class="sub-link" href="/contact/careers">Careers</a>-->
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   </nav>
 </header>
@@ -22,7 +60,6 @@
 <script>
 document.addEventListener('DOMContentLoaded', function(){
   const nav = document.querySelector('.main-nav');
-
   function onScroll(){
     if (window.scrollY === 0) {
       nav.classList.add('transparent');
@@ -30,7 +67,6 @@ document.addEventListener('DOMContentLoaded', function(){
       nav.classList.remove('transparent');
     }
   }
-
   onScroll();
   window.addEventListener('scroll', onScroll);
 });
