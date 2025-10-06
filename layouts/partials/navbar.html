@@ -1,54 +1,51 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark main-nav fixed-top shadow-sm">
     <div class="container-fluid">
-      <!-- Mobile toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+      <!-- Mobile toggler (hamburger) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+              aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Collapsible navbar content -->
+      <!-- Center logo: stays visible always -->
+      <a class="navbar-brand mx-auto" href="{{ "/" | relURL }}">
+        <img src="{{ "images/kgk.estates.logo.svg" | relURL }}" alt="Logo" height="40">
+      </a>
+
+      <!-- Collapsible content: menu items -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav-wrapper">
+        <div class="navbar-nav-wrapper d-flex w-100 justify-content-between">
+
           <!-- Left nav items -->
-          <div class="navbar-nav-left">
+          <div class="navbar-nav-left d-flex">
             <div class="nav-group">
-              <a class="nav-link main-link" href="/about">The Estates</a>
+              <a class="nav-link main-link" href="/estates">The Estates</a>
               <div class="sub-links">
-                <a class="sub-link" href="/about/history">Explore the Area</a>
-                <!--<a class="sub-link" href="/about/history">Careers</a>-->
+                <a class="sub-link" href="/explore">Explore the Area</a>
               </div>
             </div>
-            
             <div class="nav-group">
-              <a class="nav-link main-link" href="/services">Visit</a>
+              <a class="nav-link main-link" href="/visit">Visit</a>
               <div class="sub-links">
-                <a class="sub-link" href="/services/estate-management">Glenkindie Cottages</a>
-                <a class="sub-link" href="/services/consultation">Plan an Experience</a>
+                <a class="sub-link" href="/glenkindie-cottages">Glenkindie Cottages</a>
+                <a class="sub-link" href="/plan-an-experience">Plan an Experience</a>
               </div>
             </div>
           </div>
 
-          <!-- Brand centered -->
-          <a class="navbar-brand" href="{{ "/" | relURL }}">
-            <img src="{{ "images/kgk.estates.logo.svg" | relURL }}" alt="Logo" height="40">
-          </a>
-
           <!-- Right nav items -->
-          <div class="navbar-nav-right">
+          <div class="navbar-nav-right d-flex">
             <div class="nav-group">
-              <a class="nav-link main-link" href="/properties">Stewardship</a>
+              <a class="nav-link main-link" href="/stewardship">Stewardship</a>
               <div class="sub-links">
                 <a class="sub-link" href="/properties/available">Nature & Wildlife</a>
                 <a class="sub-link" href="/properties/developments">Community Involvment</a>
               </div>
             </div>
-            
             <div class="nav-group">
               <a class="nav-link main-link" href="/contact">Contact</a>
-              <div class="sub-links">
-                <!--<a class="sub-link" href="/contact">Get In Touch</a>-->
-                <!--<a class="sub-link" href="/contact/careers">Careers</a>-->
-              </div>
             </div>
           </div>
         </div>

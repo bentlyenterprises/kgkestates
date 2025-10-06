@@ -6,9 +6,6 @@ heroImages:
   - "/images/Landscape.opt.jpg"
 ---
 
-<!--   - "/images/home-hero/KildrummyRuinsHomeHero3.opt.jpg"
-  - "/images/home-hero/Kildrummy.Manor.opt.jpg"-->
-
 <div class="text-center home-first-section">
   <div class="welcome-image"></div>
   <p>

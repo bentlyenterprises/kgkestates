@@ -17,6 +17,10 @@
   href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
   rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.css">
 
@@ -30,18 +34,53 @@
     <div class="container-fluid">
 
       
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" 
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      
+      <a class="navbar-brand mx-auto" href="/">
+        <img src="/images/kgk.estates.logo.svg" alt="Logo" height="40">
+      </a>
 
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav-wrapper d-flex w-100 justify-content-between">
 
+          
+          <div class="navbar-nav-left d-flex">
+            <div class="nav-group">
+              <a class="nav-link main-link" href="/estates">The Estates</a>
+              <div class="sub-links">
+                <a class="sub-link" href="/explore">Explore the Area</a>
+              </div>
+            </div>
+            <div class="nav-group">
+              <a class="nav-link main-link" href="/visit">Visit</a>
+              <div class="sub-links">
+                <a class="sub-link" href="/glenkindie-cottages">Glenkindie Cottages</a>
+                <a class="sub-link" href="/plan-an-experience">Plan an Experience</a>
+              </div>
+            </div>
+          </div>
 
-        
-        <a class="navbar-brand mx-auto order-0" href="/">
-          <img src="/images/kgk.estates.logo.svg" alt="Logo" height="40">
-        </a>
-
-
+          
+          <div class="navbar-nav-right d-flex">
+            <div class="nav-group">
+              <a class="nav-link main-link" href="/stewardship">Stewardship</a>
+              <div class="sub-links">
+                <a class="sub-link" href="/properties/available">Nature & Wildlife</a>
+                <a class="sub-link" href="/properties/developments">Community Involvment</a>
+              </div>
+            </div>
+            <div class="nav-group">
+              <a class="nav-link main-link" href="/contact">Contact</a>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   </nav>
 </header>
@@ -49,7 +88,6 @@
 <script>
 document.addEventListener('DOMContentLoaded', function(){
   const nav = document.querySelector('.main-nav');
-
   function onScroll(){
     if (window.scrollY === 0) {
       nav.classList.add('transparent');
@@ -57,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function(){
       nav.classList.remove('transparent');
     }
   }
-
   onScroll();
   window.addEventListener('scroll', onScroll);
 });
@@ -133,9 +170,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   
   <section id="home-intro" class="text-center">
-    <!--   - "/images/home-hero/KildrummyRuinsHomeHero3.opt.jpg"
-  - "/images/home-hero/Kildrummy.Manor.opt.jpg"-->
-<div class="text-center home-first-section">
+    <div class="text-center home-first-section">
   <div class="welcome-image"></div>
   <p>
     In the heart of Aberdeenshire, Kildrummy and GlenKindie estates are undergoing quiet but

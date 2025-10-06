@@ -14,5 +14,47 @@
       <guid>http://localhost:1313/contact/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Estates</title>
+      <link>http://localhost:1313/estates/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/estates/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Explore</title>
+      <link>http://localhost:1313/explore/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/explore/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Glenkindie-cottages</title>
+      <link>http://localhost:1313/glenkindie-cottages/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/glenkindie-cottages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Plan-an-experience</title>
+      <link>http://localhost:1313/plan-an-experience/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/plan-an-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stewardship</title>
+      <link>http://localhost:1313/stewardship/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/stewardship/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Visit</title>
+      <link>http://localhost:1313/visit/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/visit/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
