@@ -518,6 +518,13 @@ body{
   margin-bottom: -3rem;
 }
 
+.welcome-image-community{
+  background: url("/images/Community/community.svg") top center / 60% no-repeat;
+  height: clamp(120px, 58vw, 200px); 
+  margin-top: 20px;
+  margin-bottom: -3rem;
+}
+
 .welcome-image-glenkindie{
   background: url("/images/GlenkindieCottagesPage/glenkindie.cottages.svg") top center / 100% no-repeat;
   height: clamp(120px, 58vw, 200px); 
@@ -684,6 +691,7 @@ body{
   font-weight: 400;
   font-size: 2.7rem;
   padding-bottom: 1.5rem;
+  font-family: 'Athelas', sans-serif;
 }
 .simple-text-countour-bg p{
   color: rgb(67, 67, 75);
