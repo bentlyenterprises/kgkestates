@@ -313,6 +313,7 @@ body{
     }
     .footer-contact{
       margin-left: 2rem;
+      gap: 2.5rem;
     }
   }
 
@@ -331,11 +332,22 @@ body{
     font-weight: 300;
     letter-spacing: .03em;
     color: var(--clr-accent);
+    display: flex !important;
+    flex-direction: row !important;
+    padding-right: 4rem;
+    gap: 2.5rem;
   }
   .footer-contact span,
   .footer-info span {
     display: block;
   }
+
+  @media (max-width: 768px) {
+  .footer-contact {
+    flex-direction: column !important;
+    gap: 0.5rem; /* optional spacing between items */
+  }
+}
 
   /* Social */
   .footer-social {
@@ -598,16 +610,16 @@ body{
 .home-first-section h1 {
   text-align: center;
   margin: 0 auto 0.5rem auto;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
+  font-family: /*'Raleway',*/ serif;
+  font-weight: 400;
   font-size: 3.2rem;
   padding-bottom: 0rem;
 }
 
 .home-first-section p {
-  font-family: 'Raleway', sans-serif;
+  font-family: /*'Raleway',*/ serif;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #e2e2d9;
   margin: 0;
   text-align: left;
@@ -619,7 +631,7 @@ body{
 .link-style {
   color: rgb(200,123,57);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @media (min-width: 768px){
@@ -640,7 +652,7 @@ body{
 .alt-hero > h3{
   text-align: left;
   margin: 0 auto 0.5rem auto;
-  font-family: "Merriweather", serif;
+  font-family: /*"Merriweather",*/ serif;
   font-weight: 400;
   font-size: 2.7rem;
   padding-bottom: 1.5rem;
@@ -658,22 +670,14 @@ body{
 .simple-text-dark-green-bg > h3{
   text-align: left;
   margin: 0 auto 0.5rem auto;
-  font-family: "Merriweather", serif;
-  font-weight: 600;
+  font-family: /*"Merriweather", */serif;
+  font-weight: 400;
   font-size: 2.7rem;
   padding-bottom: 1.5rem;
   color: #e2e2d9;
 }
 .simple-text-dark-green-bg p{
-  font-family: "Merriweather", serif;
-  font-weight: 400;
-  font-size: 1.3rem;
-  color: #e2e2d9;
-  margin: 0;
-  text-align: left;
-  letter-spacing: 0.03em;
-  padding-bottom: 1.7rem;
-  line-height: 2.3rem;
+
 }
 
 /* ===============================================================
@@ -691,13 +695,23 @@ body{
   font-weight: 400;
   font-size: 2.7rem;
   padding-bottom: 1.5rem;
-  font-family: 'Athelas', sans-serif;
+  font-family: /*'Athelas',*/ serif;
 }
 .simple-text-countour-bg p{
   color: rgb(67, 67, 75);
   padding-bottom: 4rem;
-  font-weight: 600;
-  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-family: /*"Merriweather",*/ serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.03em;
+  line-height: 2.3rem;
+}
+
+/* ===============================================================
+      TEMP REQUEST FOR SAN SERIF BODY ON "EXPLORE THE AREA"
+   =============================================================== */
+.temp-san-serif-paragraph p {
+  font-family: sans-serif !important;
 }
 
 /* ===============================================================
@@ -733,8 +747,8 @@ body{
 
 .content .image-share-text-col h3 {
   margin-bottom: 1rem;
-  font-family: 'Athelas', sans-serif;
-  font-weight: 600;
+  font-family: /*'Athelas',*/ serif;
+  font-weight: 400;
   font-size: 2.7rem;
   color: rgb(67, 67, 75);
   padding: 0rem 3rem 0.5rem 1rem;
@@ -986,6 +1000,22 @@ body{
   display: block;
 }
 
+.contact-hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* adjust height of fade */
+  pointer-events: none; /* keeps the nav clickable */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),  /* dark at top */
+    rgba(0, 0, 0, 0)    /* fully transparent */
+  );
+  z-index: 0.5;
+}
+
 @media (min-width: 992px) {
   .contact-hero-banner img {
     max-height: 70vh;
@@ -1175,7 +1205,7 @@ body{
 
 .image-text-section h2 {
   margin-bottom:       1rem;
-  font-family:         'Athelas', sans-serif;
+  font-family:         /*'Athelas',*/ serif;
   font-weight:         900;
   font-size: 2.7rem;
   color:               rgb(29, 33, 30);
@@ -1242,7 +1272,7 @@ body{
   text-align: center;        
   font-size: 1.7rem;
   text-align: center;
-  font-family:         'Athelas', sans-serif;
+  font-family:         /*'Athelas',*/ serif;
   font-weight:         900;
   color: #e2e2d9;
 }
@@ -1251,7 +1281,7 @@ body{
   text-align: center;          
   font-size: 1.3rem;
   text-align: center;
-  font-family:         'Athelas', sans-serif;
+  font-family:         /*'Athelas',*/ serif;
   font-weight:         200;
   color: #e2e2d9;
   padding-top: 15px;
@@ -1325,7 +1355,7 @@ body {
 .square .title {
   font-size: clamp(0.7rem, 2.5vw, 1.7rem);
   text-align: center;
-  font-family: 'Athelas', sans-serif;
+  font-family: /*'Athelas',*/ serif;
   font-weight: 900;
   color: #e2e2d9;
   word-break: break-word;
@@ -1392,9 +1422,9 @@ body {
 .split-text {
   flex: 1 1 50%;
   padding: 0rem;
-  font-size: 20px;
+  font-size: 1.4rem;
   color: white;
-  line-height: 2.5rem;
+  line-height: 2.3rem;
   color: #e2e2d9;
   display: flex;
     align-items: center;
@@ -1402,7 +1432,7 @@ body {
 }
 .split-text p{
   padding: 5rem;
-  font-family: "Merriweather", serif;
+  font-family: /*"Merriweather",*/ serif;
 }
 
 .split-image img {
