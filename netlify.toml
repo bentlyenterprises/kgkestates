@@ -1,12 +1,23 @@
+# ---------------------------------------------------------------------------
+# TEMPORARY: site hidden behind a single logo splash page during design work.
+# Only the standalone splash/ folder is published; the full Hugo site is not
+# built or deployed. To restore the live site, revert this file to publish
+# "public" with command "hugo" (see the commented block below).
+# ---------------------------------------------------------------------------
 [build]
-  publish = "public"
-  command = "hugo"
+  publish = "splash"
+  command = ""
 
-[build.environment]
-  HUGO_VERSION = "0.139.0"
-
-[[redirects]]
-  from    = "/TempOGAwesomeContent/*"
-  to      = "/"
-  status  = 200
-  force   = true
+# --- Original configuration (restore to bring the full site back) ----------
+# [build]
+#   publish = "public"
+#   command = "hugo"
+#
+# [build.environment]
+#   HUGO_VERSION = "0.139.0"
+#
+# [[redirects]]
+#   from    = "/TempOGAwesomeContent/*"
+#   to      = "/"
+#   status  = 200
+#   force   = true
