@@ -20,6 +20,7 @@
   @media only screen and (max-width:620px) {
     .wrap { width:100% !important; }
     .fluid { width:100% !important; height:auto !important; }
+    .title { width:70% !important; height:auto !important; }
     .panel-pad { padding-left:16% !important; padding-right:16% !important; }
     .date { font-size:13px !important; letter-spacing:.3px !important; }
     .orn { width:18px !important; height:18px !important; }
@@ -41,21 +42,30 @@
 
       <table role="presentation" class="wrap" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
 
-        <!-- HEADER: border, manor engraving & script title -->
+        <!-- HEADER: border & manor engraving -->
         <tr>
           <td>
-            <img class="fluid" src="https://www.kgkestates.uk/emails/victorianchristmas/images/header.jpg" width="600" height="531"
-                 alt="You are warmly invited to a Victorian Christmas Celebration at Kildrummy Manor"
-                 style="width:600px; height:auto; color:#c5a868; font-family:Georgia, serif; font-size:22px; font-style:italic; text-align:center; background:#0a1150;">
+            <img class="fluid" src="https://www.kgkestates.uk/emails/victorianchristmas/images/header.jpg" width="600" height="273"
+                 alt="Kildrummy Manor"
+                 style="width:600px; height:auto; color:#c5a868; font-family:Georgia, serif; font-size:16px; text-align:center; background:#0a1150;">
           </td>
         </tr>
 
-        <!-- BODY: live text over the patterned panel -->
+        <!-- BODY: title + live text over the patterned panel -->
         <tr>
-          <td class="panel-pad" align="center" valign="top" height="489"
+          <td align="center" valign="top" height="747"
               background="https://www.kgkestates.uk/emails/victorianchristmas/images/body-bg.jpg"
               bgcolor="#0a1150"
-              style="background-color:#0a1150; background-image:url('https://www.kgkestates.uk/emails/victorianchristmas/images/body-bg.jpg'); background-size:100% 100%; background-repeat:no-repeat; background-position:center top; padding:20px 104px 30px 104px;">
+              style="background-color:#0a1150; background-image:url('https://www.kgkestates.uk/emails/victorianchristmas/images/body-bg.jpg'); background-size:100% 100%; background-repeat:no-repeat; background-position:center top; padding:0 0 34px 0;">
+
+            <!-- Script title -->
+            <img class="title" src="https://www.kgkestates.uk/emails/victorianchristmas/images/title.png" width="420" height="255"
+                 alt="You are warmly invited to a Victorian Christmas Celebration at Kildrummy Manor"
+                 style="display:block; margin:0 auto; width:420px; height:auto; color:#c5a868; font-family:Georgia, serif; font-size:24px; font-style:italic; line-height:34px; text-align:center;">
+
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td class="panel-pad" align="center" style="padding:24px 104px 0 104px;">
 
             <!-- Date line with ornaments -->
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
@@ -103,13 +113,17 @@
               </tr>
             </table>
 
+                </td>
+              </tr>
+            </table>
+
           </td>
         </tr>
 
         <!-- FOOTER: bottom border -->
         <tr>
           <td>
-            <img class="fluid" src="https://www.kgkestates.uk/emails/victorianchristmas/images/footer.jpg" width="600" height="88" alt=""
+            <img class="fluid" src="https://www.kgkestates.uk/emails/victorianchristmas/images/footer.jpg" width="600" height="79" alt=""
                  style="width:600px; height:auto; background:#1d3a9a;">
           </td>
         </tr>
