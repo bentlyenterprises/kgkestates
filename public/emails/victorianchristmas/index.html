@@ -16,6 +16,18 @@
   a { text-decoration:none; }
   .body-text { font-family:'Zilla Slab', Georgia, 'Times New Roman', serif; }
   .caps { font-family:'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  @media only screen and (max-width:620px) {
+    .wrap { width:100% !important; }
+    .fluid { width:100% !important; height:auto !important; }
+    .title { width:70% !important; height:auto !important; }
+    .panel-pad { padding-left:16% !important; padding-right:16% !important; }
+    .date { font-size:13px !important; letter-spacing:.3px !important; }
+    .orn { width:18px !important; height:18px !important; }
+    .orn-l { padding-right:7px !important; } .orn-r { padding-left:7px !important; }
+    .copy { font-size:14px !important; line-height:22px !important; }
+  }
+</style>
+<style>
   .rsvp-btn:hover .rsvp-red { background:#a3372f !important; }
   .scoop {
     -webkit-mask:
@@ -29,16 +41,10 @@
       radial-gradient(circle at calc(0px - var(--o)) calc(100% + var(--o)), transparent var(--r), #000 calc(var(--r) + .5px)) left bottom / 51% 51% no-repeat,
       radial-gradient(circle at calc(100% + var(--o)) calc(100% + var(--o)), transparent var(--r), #000 calc(var(--r) + .5px)) right bottom / 51% 51% no-repeat;
   }
-  @media only screen and (max-width:620px) {
-    .wrap { width:100% !important; }
-    .fluid { width:100% !important; height:auto !important; }
-    .title { width:70% !important; height:auto !important; }
-    .panel-pad { padding-left:16% !important; padding-right:16% !important; }
-    .date { font-size:13px !important; letter-spacing:.3px !important; }
-    .orn { width:18px !important; height:18px !important; }
-    .orn-l { padding-right:7px !important; } .orn-r { padding-left:7px !important; }
-    .copy { font-size:14px !important; line-height:22px !important; }
-  }
+  .sc0 { --o:0px; --r:7px; }
+  .sc1 { --o:2px; --r:9px; }
+  .sc2 { --o:5px; --r:12px; }
+  .sc3 { --o:6px; --r:13px; }
 </style>
 </head>
 <body style="margin:0; padding:0; background:#050b3a;">
@@ -117,11 +123,11 @@
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin-top:34px;">
               <tr>
                 <td align="center">
-                  <a class="rsvp-btn scoop" href="https://www.kgkestates.uk/emails/victorianchristmas/rsvp.html" target="_blank"
-                     style="display:inline-block; padding:2px; background:#c5a868; text-decoration:none; --o:0px; --r:7px;">
-                    <span class="rsvp-red scoop" style="display:block; padding:3px; background:#91302a; --o:2px; --r:9px;">
-                      <span class="scoop" style="display:block; padding:1px; background:#c5a868; --o:5px; --r:12px;">
-                        <span class="rsvp-red scoop caps" style="display:block; padding:10px 38px; background:#91302a; font-family:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:22px; line-height:28px; color:#d9bf85; --o:6px; --r:13px;">
+                  <a class="rsvp-btn scoop sc0" href="https://www.kgkestates.uk/emails/victorianchristmas/rsvp.html" target="_blank"
+                     style="display:inline-block; padding:2px; background:#c5a868; color:#d9bf85; text-decoration:none;">
+                    <span class="rsvp-red scoop sc1" style="display:block; padding:3px; background:#91302a;">
+                      <span class="scoop sc2" style="display:block; padding:1px; background:#c5a868;">
+                        <span class="rsvp-red scoop sc3 caps" style="display:block; padding:10px 38px; background:#91302a; font-family:'Montserrat','Helvetica Neue',Helvetica,Arial,sans-serif; font-size:22px; line-height:28px; color:#d9bf85;">
                           <strong style="font-weight:700;">R.S.V.P.</strong> <span style="font-weight:500;">Here</span>
                         </span>
                       </span>
