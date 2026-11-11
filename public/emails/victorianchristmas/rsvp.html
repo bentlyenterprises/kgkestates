@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>RSVP · Victorian Christmas Celebration at Kildrummy Manor</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Zilla+Slab:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #050b3a;
+    --panel: #0a1150;
+    --gold: #c5a868;
+    --gold-soft: #d9bf85;
+    --gold-dim: #8c7f5c;
+    --red: #91302a;
+    --red-hover: #a3372f;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--navy);
+    color: var(--gold);
+    font-family: 'Zilla Slab', Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  .card { max-width: 600px; margin: 24px auto; }
+  .card > img { display: block; width: 100%; height: auto; }
+  .panel {
+    background: var(--panel) url('images/body-bg.jpg') center top / 100% 100% no-repeat;
+    padding: 24px 13.5% 40px;
+  }
+  h1 {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0 0 6px;
+  }
+  .intro { text-align: center; margin: 0 0 24px; }
+  sup { font-size: .6em; line-height: 0; }
+  label, legend {
+    display: block;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+  }
+  .field { margin-bottom: 18px; }
+  .req { color: var(--gold-soft); }
+  input[type=text], input[type=email], input[type=number], textarea, select {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(5, 11, 58, .78);
+    border: 1px solid var(--gold-dim);
+    border-radius: 3px;
+    color: var(--gold-soft);
+    font: inherit;
+    font-size: 16px;
+  }
+  textarea { min-height: 84px; resize: vertical; }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(197, 168, 104, .35);
+  }
+  ::placeholder { color: var(--gold-dim); opacity: 1; }
+  fieldset { border: 0; padding: 0; margin: 0 0 18px; }
+  .choice { display: flex; gap: 10px; flex-wrap: wrap; }
+  .choice label {
+    flex: 1 1 200px;
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--gold-dim);
+    border-radius: 3px;
+    background: rgba(5, 11, 58, .78);
+    text-transform: none; letter-spacing: 0;
+    font-family: 'Zilla Slab', Georgia, serif; font-size: 16px; font-weight: 400;
+    cursor: pointer; margin: 0;
+  }
+  .choice input { accent-color: var(--red); width: 18px; height: 18px; margin: 0; }
+  .choice label:has(input:checked) { border-color: var(--gold); }
+  .row { display: flex; gap: 14px; }
+  .row .field { flex: 1; }
+  .hidden { display: none; }
+  .btn-wrap { text-align: center; margin-top: 28px; }
+  button {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 21px;
+    color: var(--gold-soft);
+    background: var(--red);
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 3px var(--red), inset 0 0 0 4px var(--gold);
+    padding: 15px 44px;
+    cursor: pointer;
+  }
+  button:hover { background: var(--red-hover); box-shadow: inset 0 0 0 3px var(--red-hover), inset 0 0 0 4px var(--gold); }
+  button strong { font-weight: 700; }
+  .card > .footer { display: block; width: 100%; height: auto; }
+  @media (max-width: 520px) {
+    .row { flex-direction: column; gap: 0; }
+    h1 { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <img src="images/header.jpg" width="600" height="531"
+         alt="Victorian Christmas Celebration at Kildrummy Manor">
+
+    <div class="panel">
+      <h1>DECEMBER 18<sup>th</sup> FROM 4 P.M.</h1>
+      <p class="intro">Kindly reply by November 20<sup>th</sup>.<br>
+        We'll follow up with further details of the evening.</p>
+
+      <form name="victorian-christmas-rsvp" method="POST"
+            action="/emails/victorianchristmas/thank-you.html"
+            data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="victorian-christmas-rsvp">
+        <p class="hidden"><label>Leave this empty: <input name="bot-field"></label></p>
+
+        <div class="field">
+          <label for="name">Your name <span class="req">*</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <fieldset>
+          <legend>Will you attend? <span class="req">*</span></legend>
+          <div class="choice">
+            <label><input type="radio" name="attending" value="Joyfully accepts" required> Joyfully accept</label>
+            <label><input type="radio" name="attending" value="Regretfully declines"> Regretfully decline</label>
+          </div>
+        </fieldset>
+
+        <div id="attending-details">
+          <div class="row">
+            <div class="field">
+              <label for="party">Number attending</label>
+              <select id="party" name="number-attending">
+                <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="guests">Names of your guests</label>
+            <input id="guests" name="guest-names" type="text" placeholder="If you are bringing anyone">
+          </div>
+
+          <div class="field">
+            <label for="dietary">Dietary requirements</label>
+            <textarea id="dietary" name="dietary-requirements" placeholder="Allergies, vegetarian, vegan, etc."></textarea>
+          </div>
+
+          <div class="field">
+            <label for="drinks">Drink preferences</label>
+            <textarea id="drinks" name="drink-preferences" placeholder="Wine, whisky, non-alcoholic, etc."></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="message">A note for Chris &amp; Camille</label>
+          <textarea id="message" name="message" placeholder="Optional"></textarea>
+        </div>
+
+        <div class="btn-wrap">
+          <button type="submit"><strong>Send</strong> R.S.V.P.</button>
+        </div>
+      </form>
+    </div>
+
+    <img class="footer" src="images/footer.jpg" width="600" height="88" alt="">
+  </main>
+
+<script>
+  // Hide the guest/dietary questions when someone declines.
+  (function () {
+    var details = document.getElementById('attending-details');
+    document.querySelectorAll('input[name="attending"]').forEach(function (r) {
+      r.addEventListener('change', function () {
+        details.style.display = (this.value === 'Regretfully declines' && this.checked) ? 'none' : '';
+      });
+    });
+  })();
+</script>
+</body>
+</html>
