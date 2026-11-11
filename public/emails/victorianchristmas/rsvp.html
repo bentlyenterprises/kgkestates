@@ -189,11 +189,15 @@
   // Hide the guest/dietary questions when someone declines.
   (function () {
     var details = document.getElementById('attending-details');
-    document.querySelectorAll('input[name="attending"]').forEach(function (r) {
-      r.addEventListener('change', function () {
-        details.style.display = (this.value === 'Regretfully declines' && this.checked) ? 'none' : '';
-      });
-    });
+    var fields = details.querySelectorAll('input, select, textarea');
+    var radios = document.querySelectorAll('input[name="attending"]');
+    function sync() {
+      var declined = document.querySelector('input[name="attending"][value="Regretfully declines"]').checked;
+      details.style.display = declined ? 'none' : '';
+      fields.forEach(function (f) { f.disabled = declined; });
+    }
+    radios.forEach(function (r) { r.addEventListener('change', sync); });
+    window.addEventListener('pageshow', sync);
   })();
 </script>
 </body>
